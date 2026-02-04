@@ -1,0 +1,8 @@
+C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.csproj.AssemblyReference.cache
+C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.csproj.CoreCompileInputs.cache
+C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\GameProgII_FirstPlayable-BenF.exe.config
+C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\GameProgII_FirstPlayable-BenF.exe
+C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\GameProgII_FirstPlayable-BenF.pdb
+C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.exe
+C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.pdb
+C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.exe.config
