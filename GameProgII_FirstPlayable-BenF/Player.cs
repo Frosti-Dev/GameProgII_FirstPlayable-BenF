@@ -10,12 +10,14 @@ namespace GameProgII_FirstPlayable_BenF
     {
         public int _posX;
         public int _posY;
+        public int _health;
         public int _limiter;
 
-        public Player(int posX, int posY, int limiter)
+        public Player(int posX, int posY, int health, int limiter)
         {
             _posX = posX;
             _posY = posY;
+            _health = health;
             _limiter = limiter;
         }
 

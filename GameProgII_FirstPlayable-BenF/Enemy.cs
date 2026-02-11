@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -39,35 +41,43 @@ namespace GameProgII_FirstPlayable_BenF
 
         public void EnemyUpdate()
         {
-            //aligns enemy x with player x
-            if (_pos.Item1 > _target._posX)
+            if(Normalize(_target._posX - _pos.Item1) > Normalize(_target._posY - _pos.Item2))
             {
-                _pos.Item1 -= 1;
-            }
+                //aligns enemy x with player x
+                if (_pos.Item1 > _target._posX)
+                {
+                    _pos.Item1 -= 1;
+                }
 
-            else if (_pos.Item1 < _target._posX)
-            {
-                _pos.Item1 += 1;
+                else if (_pos.Item1 < _target._posX)
+                {
+                    _pos.Item1 += 1;
+                }
+                else
+                {
+                    //do nothing
+                }
             }
+            
             else
             {
-                //do nothing
+                //aligns enemy y with player y
+                if (_pos.Item2 > _target._posY)
+                {
+                    _pos.Item2 -= 1;
+                }
+
+                else if (_pos.Item2 < _target._posY)
+                {
+                    _pos.Item2 += 1;
+                }
+                else
+                {
+                    //do nothing
+                }
             }
 
-            //aligns enemy y with player y
-            if (_pos.Item2 > _target._posY)
-            {
-                _pos.Item2 -= 1;
-            }
-
-            else if (_pos.Item2 < _target._posY)
-            {
-                _pos.Item2 += 1;
-            }
-            else
-            {
-                //do nothing
-            }
+            Debug.WriteLine($"{Normalize(_target._posX - _pos.Item1)}, {Normalize(_target._posY - _pos.Item2)}");
 
             if (_health == 0)
             {
@@ -76,5 +86,18 @@ namespace GameProgII_FirstPlayable_BenF
             }
         }
 
+        private int Normalize(int value)
+        {
+            if(value < 0)
+            {
+                value -= value * 2;
+                return value;
+            }
+
+            else
+            {
+                return value;
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace GameProgII_FirstPlayable_BenF
     internal class Program
     {
         static Map map = new Map(1);
-        static Player player = new Player(5, 5, 1);
+        static Player player = new Player(5, 5, 10, 1);
         static Enemy enemy = new Enemy((10, 10), 10, true, 'E', player);
 
         static void Main(string[] args)
