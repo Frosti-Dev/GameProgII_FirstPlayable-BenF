@@ -6,3 +6,10 @@ C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayab
 C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.exe
 C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.pdb
 C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.exe.config
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\GameProgII_FirstPlayable-BenF.exe.config
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\GameProgII_FirstPlayable-BenF.exe
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\GameProgII_FirstPlayable-BenF.pdb
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.csproj.AssemblyReference.cache
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.csproj.CoreCompileInputs.cache
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.exe
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.pdb

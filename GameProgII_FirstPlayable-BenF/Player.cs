@@ -13,6 +13,8 @@ namespace GameProgII_FirstPlayable_BenF
         public int _health;
         public int _limiter;
 
+        public bool _isAlive = true;
+
         public Player(int posX, int posY, int health, int limiter)
         {
             _posX = posX;
@@ -30,6 +32,10 @@ namespace GameProgII_FirstPlayable_BenF
 
         public void PlayerUpdate()
         {
+            if (_health == 0)
+            {
+               _isAlive = false;
+            }
 
             ConsoleKeyInfo keyinfo = Console.ReadKey(true);
 
@@ -81,6 +87,11 @@ namespace GameProgII_FirstPlayable_BenF
                     Environment.Exit(0);
                     break;
             }
+        }
+
+        public void TakeDamage(int amount)
+        {
+            _health -= amount; 
         }
 
     }

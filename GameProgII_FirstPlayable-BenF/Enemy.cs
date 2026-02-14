@@ -16,6 +16,8 @@ namespace GameProgII_FirstPlayable_BenF
         public char _model;
         public Player _target;
 
+        public bool _isAlive = true; 
+
 
         public Enemy((int, int) pos, int health, bool alive, char model, Player target)
         {
@@ -41,7 +43,12 @@ namespace GameProgII_FirstPlayable_BenF
 
         public void EnemyUpdate()
         {
-            if(Normalize(_target._posX - _pos.Item1) > Normalize(_target._posY - _pos.Item2))
+            if (_health == 0)
+            {
+                _isAlive = false;
+            }
+
+            if (Normalize(_target._posX - _pos.Item1) > Normalize(_target._posY - _pos.Item2))
             {
                 //aligns enemy x with player x
                 if (_pos.Item1 > _target._posX)
@@ -77,7 +84,10 @@ namespace GameProgII_FirstPlayable_BenF
                 }
             }
 
-            Debug.WriteLine($"{Normalize(_target._posX - _pos.Item1)}, {Normalize(_target._posY - _pos.Item2)}");
+            #region Debug Lines
+            //Debug.WriteLine($"{Normalize(_target._posX - _pos.Item1)}, {Normalize(_target._posY - _pos.Item2)}"); ///(relative to the target pos)
+            Debug.WriteLine($"{_model} Pos: {_pos}"); ///(pos)
+            #endregion
 
             if (_health == 0)
             {
@@ -98,6 +108,12 @@ namespace GameProgII_FirstPlayable_BenF
             {
                 return value;
             }
+    
+        }
+
+        public void TakeDamage(int amount)
+        {
+            _health -= amount;
         }
     }
 }
