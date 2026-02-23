@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GameProgII_FirstPlayable_BenF
 {
-    internal class Enemy
+    internal class Enemy : ICharacter
     {
         public (int, int) _pos;
         public int _health;
@@ -29,7 +29,7 @@ namespace GameProgII_FirstPlayable_BenF
         }
 
 
-        public void EnemyDraw()
+        public void Draw()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.SetCursorPosition(_pos.Item1, _pos.Item2);
@@ -41,14 +41,9 @@ namespace GameProgII_FirstPlayable_BenF
 
         }
 
-        public void EnemyUpdate()
+        public void Update()
         {
-            if (_health == 0)
-            {
-                _isAlive = false;
-            }
-
-            if (Normalize(_target._posX - _pos.Item1) > Normalize(_target._posY - _pos.Item2))
+            if (Absolute(_target._posX - _pos.Item1) > Absolute(_target._posY - _pos.Item2))
             {
                 //aligns enemy x with player x
                 if (_pos.Item1 > _target._posX)
@@ -86,17 +81,11 @@ namespace GameProgII_FirstPlayable_BenF
 
             #region Debug Lines
             //Debug.WriteLine($"{Normalize(_target._posX - _pos.Item1)}, {Normalize(_target._posY - _pos.Item2)}"); ///(relative to the target pos)
-            Debug.WriteLine($"{_model} Pos: {_pos}"); ///(pos)
+            //Debug.WriteLine($"{_model} Pos: {_pos}"); ///(pos)
             #endregion
-
-            if (_health == 0)
-            {
-                _alive = false;
-                _pos = (50, 0);
-            }
         }
 
-        private int Normalize(int value)
+        private int Absolute(int value)
         {
             if(value < 0)
             {
@@ -114,6 +103,16 @@ namespace GameProgII_FirstPlayable_BenF
         public void TakeDamage(int amount)
         {
             _health -= amount;
+
+            if (_health == 0)
+            {
+                Destroy();
+            }
+        }
+
+        public void Destroy()
+        {
+            _isAlive = false;
         }
     }
 }

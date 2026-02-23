@@ -12,11 +12,18 @@ namespace GameProgII_FirstPlayable_BenF
         static int mapScale = 1;
         static bool hasWon;
         static bool isPlayerTurn;
+        static int coins;
 
         static Map map = new Map(mapScale);
         static Player player = new Player(5, 5, 10, mapScale);
         static Enemy enemy1 = new Enemy((10, 10), 10, true, '1', player);
         static Enemy enemy2 = new Enemy((5, 10), 10, true, '2', player);
+
+        static List<Pickup> pickups = new List<Pickup>();
+        static Pickup pickup1 = new Pickup((10, 2), 'o');
+        static Pickup pickup2 = new Pickup((21, 2), 'o');
+        static Pickup pickup3 = new Pickup((21, 11), 'o');
+
         #endregion
 
         static public void CheckHits()
@@ -35,6 +42,12 @@ namespace GameProgII_FirstPlayable_BenF
                 {
                     enemy2.TakeDamage(1);
                     enemy2._pos = (5, 10);
+                }
+
+                if(playerPos == pickup1._pos)
+                {
+                    coins++;
+                    pickup1.Destroy();
                 }
             }
 
@@ -65,17 +78,20 @@ namespace GameProgII_FirstPlayable_BenF
                 Console.WriteLine($"Player Health: {player._health}");
                 Console.WriteLine($"{enemy1._model} Health: {enemy1._health}");
                 Console.WriteLine($"{enemy2._model} Health: {enemy2._health}");
+                Console.WriteLine($"Coins: {coins}");
+
+                pickup1.Draw();
 
                 if (enemy1._isAlive)
                 {
-                    enemy1.EnemyDraw();
+                    enemy1.Draw();
                 }
                 if (enemy2._isAlive)
                 {
-                    enemy2.EnemyDraw();
+                    enemy2.Draw();
                 }
 
-                player.PlayerDraw();
+                player.Draw();
                 CheckHits();
           
 
@@ -85,24 +101,27 @@ namespace GameProgII_FirstPlayable_BenF
                     
                     while(turnCounter < 2)
                     {
-                        player.PlayerUpdate();
+                        player.Update();
                         Console.Clear();
                         map.DisplayMap();
 
                         Console.WriteLine($"Player Health: {player._health}");
                         Console.WriteLine($"{enemy1._model} Health: {enemy1._health}");
                         Console.WriteLine($"{enemy2._model} Health: {enemy2._health}");
+                        Console.WriteLine($"Coins: {coins}");
+
+                        pickup1.Draw();
 
                         if (enemy1._isAlive)
                         {
-                            enemy1.EnemyDraw();
+                            enemy1.Draw();
                         }
                         if (enemy2._isAlive)
                         {
-                            enemy2.EnemyDraw();
+                            enemy2.Draw();
                         }
 
-                        player.PlayerDraw();
+                        player.Draw();
                         CheckHits();
 
                         turnCounter++;
@@ -110,8 +129,8 @@ namespace GameProgII_FirstPlayable_BenF
                     isPlayerTurn = false;
                 }
                 
-                enemy1.EnemyUpdate();
-                enemy2.EnemyUpdate();
+                enemy1.Update();
+                enemy2.Update();
                 CheckHits();
 
 

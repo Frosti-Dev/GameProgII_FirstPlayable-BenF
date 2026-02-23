@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -30,6 +31,8 @@ namespace GameProgII_FirstPlayable_BenF
         {'`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
         {'`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
 };
+
+        public List<bool> _isOccupied = new List<bool>();
 
         public Map(int scale)
         {
@@ -63,10 +66,39 @@ namespace GameProgII_FirstPlayable_BenF
                         int timer = 0;
                         while (timer < _scale)
                         {
+                            if (map[i, j] == '^')
+                            {
+                                Console.ForegroundColor = ConsoleColor.DarkGray;
+
+                                _isOccupied.Add(true);
+                                
+                            }
+
+                            if (map[i, j] == '~')
+                            {
+                                Console.ForegroundColor = ConsoleColor.Blue;
+                                _isOccupied.Add(true);
+                            }
+
+                            if (map[i, j] == '*')
+                            {
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                _isOccupied.Add(true);
+                            }
+
+                            if (map[i,j] == '`')
+                            {
+                                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                                _isOccupied.Add(false);
+                            }
+
                             Console.Write(map[i, j] + " ");
+
                             timer++;
                         }
                     }
+                    Console.ForegroundColor = ConsoleColor.White;
+
                     Console.Write('|');
                     Console.WriteLine(" ");
                     row++;
@@ -85,6 +117,8 @@ namespace GameProgII_FirstPlayable_BenF
             Console.WriteLine(" ");
 
             #endregion
+
+            //Debug.WriteLine(_isOccupied[0]);
 
             //Displays
             //Console.WriteLine("Map legend: ");

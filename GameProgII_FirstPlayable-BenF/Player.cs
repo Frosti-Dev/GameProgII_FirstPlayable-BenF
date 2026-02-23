@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GameProgII_FirstPlayable_BenF
 {
-    internal class Player
+    internal class Player :ICharacter
     {
         public int _posX;
         public int _posY;
@@ -23,19 +24,15 @@ namespace GameProgII_FirstPlayable_BenF
             _limiter = limiter;
         }
 
-        public void PlayerDraw()
+        public void Draw()
         {
             Console.SetCursorPosition(_posX, _posY);
-            Console.Write("X");
+            Console.Write('X');
             Console.SetCursorPosition(_posX, _posY);
         }
 
-        public void PlayerUpdate()
+        public void Update()
         {
-            if (_health == 0)
-            {
-               _isAlive = false;
-            }
 
             ConsoleKeyInfo keyinfo = Console.ReadKey(true);
 
@@ -87,11 +84,24 @@ namespace GameProgII_FirstPlayable_BenF
                     Environment.Exit(0);
                     break;
             }
+
+            Debug.WriteLine($"Player Pos: {_posX},{_posY}"); ///(pos)
+
         }
 
         public void TakeDamage(int amount)
         {
             _health -= amount; 
+
+            if (_health == 0)
+            {
+                Destroy();
+            }
+        }
+
+        public void Destroy()
+        {
+            _isAlive = false;
         }
 
     }
