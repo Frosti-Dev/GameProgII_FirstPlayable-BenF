@@ -104,6 +104,42 @@ namespace GameProgII_FirstPlayable_BenF
         {
             _health -= amount;
 
+            if (Absolute(_target._prevPOS.Item1 - _pos.Item1) > Absolute(_target._prevPOS.Item2 - _pos.Item2))
+            {
+                //gets knocked back
+                if (_pos.Item1 > _target._prevPOS.Item1)
+                {
+                    _pos.Item1 += 2;
+                }
+
+                else if (_pos.Item1 < _target._prevPOS.Item1)
+                {
+                    _pos.Item1 -= 2;
+                }
+                else
+                {
+                    //do nothing
+                }
+            }
+
+            else
+            {
+                
+                if (_pos.Item2 > _target._prevPOS.Item2)
+                {
+                    _pos.Item2 += 2;
+                }
+
+                else if (_pos.Item2 < _target._prevPOS.Item2)
+                {
+                    _pos.Item2 -= 2;
+                }
+                else
+                {
+                    //do nothing
+                }
+            }
+
             if (_health == 0)
             {
                 Destroy();

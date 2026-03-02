@@ -16,6 +16,8 @@ namespace GameProgII_FirstPlayable_BenF
 
         static Map map = new Map(mapScale);
         static Player player = new Player(5, 5, 10, mapScale);
+
+        static List<Enemy> enemies = new List<Enemy>();
         static Enemy enemy1 = new Enemy((10, 10), 10, true, '1', player);
         static Enemy enemy2 = new Enemy((5, 10), 10, true, '2', player);
 
@@ -35,13 +37,13 @@ namespace GameProgII_FirstPlayable_BenF
                 if (playerPos == enemy1._pos)
                 {
                     enemy1.TakeDamage(1);
-                    enemy1._pos = (10, 10);
+                    //enemy1._pos = (10, 10);
                 }
 
                 if (playerPos == enemy2._pos)
                 {
                     enemy2.TakeDamage(1);
-                    enemy2._pos = (5, 10);
+                    //enemy2._pos = (5, 10);
                 }
 
                 if(playerPos == pickup1._pos)
@@ -56,21 +58,31 @@ namespace GameProgII_FirstPlayable_BenF
                 if (playerPos == enemy1._pos)
                 {
                     player.TakeDamage(1);
-                    enemy1._pos = (10, 10);
+                    //enemy1._pos = (10, 10);
                 }
 
                 if (playerPos == enemy2._pos)
                 {
                     player.TakeDamage(1);
-                    enemy2._pos = (5, 10);
+                    //enemy2._pos = (5, 10);
                 }
             }
         }
 
         static void Main(string[] args)
         {
+            //add to lists
+            pickups.Add(pickup1);
+            pickups.Add(pickup2);
+            pickups.Add(pickup3);
+
+            enemies.Add(enemy1);
+            enemies.Add(enemy2);
+
             while (player._isAlive)
-            {    
+            {
+                player._prevPOS = (player._posX, player._posY);
+
                 isPlayerTurn = true;
                 Console.Clear();
                 map.DisplayMap();
@@ -80,15 +92,17 @@ namespace GameProgII_FirstPlayable_BenF
                 Console.WriteLine($"{enemy2._model} Health: {enemy2._health}");
                 Console.WriteLine($"Coins: {coins}");
 
-                pickup1.Draw();
-
-                if (enemy1._isAlive)
+                foreach(Pickup pickup in pickups)
                 {
-                    enemy1.Draw();
+                    pickup.Draw();
                 }
-                if (enemy2._isAlive)
+                
+                foreach(Enemy enemy in enemies)
                 {
-                    enemy2.Draw();
+                    if (enemy._isAlive)
+                    {
+                        enemy.Draw();
+                    }
                 }
 
                 player.Draw();
@@ -110,15 +124,17 @@ namespace GameProgII_FirstPlayable_BenF
                         Console.WriteLine($"{enemy2._model} Health: {enemy2._health}");
                         Console.WriteLine($"Coins: {coins}");
 
-                        pickup1.Draw();
-
-                        if (enemy1._isAlive)
+                        foreach (Pickup pickup in pickups)
                         {
-                            enemy1.Draw();
+                            pickup.Draw();
                         }
-                        if (enemy2._isAlive)
+
+                        foreach (Enemy enemy in enemies)
                         {
-                            enemy2.Draw();
+                            if (enemy._isAlive)
+                            {
+                                enemy.Draw();
+                            }
                         }
 
                         player.Draw();
@@ -129,15 +145,23 @@ namespace GameProgII_FirstPlayable_BenF
                     isPlayerTurn = false;
                 }
                 
-                enemy1.Update();
-                enemy2.Update();
+                foreach(Enemy enemy in enemies)
+                {
+                    if (enemy._isAlive)
+                    {
+                        enemy.Update();
+                    }
+                }
+                
                 CheckHits();
 
-
-                if (!enemy1._isAlive)
+                foreach(Enemy enemy in enemies)
                 {
-                    hasWon = true;
-                    break;
+                    if (!enemy._isAlive)
+                    {
+                        hasWon = true;
+                        break;
+                    }
                 }
 
                 if (!player._isAlive)

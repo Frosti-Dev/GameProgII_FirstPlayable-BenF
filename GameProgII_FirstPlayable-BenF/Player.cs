@@ -13,6 +13,7 @@ namespace GameProgII_FirstPlayable_BenF
         public int _posY;
         public int _health;
         public int _limiter;
+        public (int, int) _prevPOS;
 
         public bool _isAlive = true;
 
