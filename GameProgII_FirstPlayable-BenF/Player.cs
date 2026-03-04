@@ -16,6 +16,7 @@ namespace GameProgII_FirstPlayable_BenF
         public int _bound;
         public Map _map;
         public (int, int) _prevPOS;
+        public int _coins;
 
         public bool _isAlive = true;
 

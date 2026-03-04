@@ -13,7 +13,6 @@ namespace GameProgII_FirstPlayable_BenF
         static int mapScale = 1;
         static bool hasWon;
         static bool isPlayerTurn;
-        static int coins;
 
         static Map map = new Map(mapScale);
         static Player player = new Player(3, 3, 25, map, 10, mapScale);
@@ -23,9 +22,10 @@ namespace GameProgII_FirstPlayable_BenF
         static ConfusedEnemy enemy2 = new ConfusedEnemy((5, 10), 10, true, '?', player);
 
         static List<IEntity> pickups = new List<IEntity>();
-        static Pickup pickup1 = new Pickup((11, 3), 'o');
+        static Coin coin1 = new Coin((11, 3), 'o', player);
+        static Coin coin2 = new Coin((21, 11), 'o', player);
         static HealthItem healthPickup = new HealthItem((21, 3), '+', player);
-        static Pickup pickup3 = new Pickup((21, 11), 'o');
+       
 
         #endregion
 
@@ -50,25 +50,18 @@ namespace GameProgII_FirstPlayable_BenF
                         pickup.Destroy();
                     }
                 }
-                if(playerPos == pickup1._pos)
-                {
-                    coins++;
-                    pickup1.Destroy();
-                }
+                
+                
             }
 
             else
             {
-                if (playerPos == enemy1._pos)
+                foreach(ICharacter enemy in enemies)
                 {
-                    player.TakeDamage(1);
-                    //enemy1._pos = (10, 10);
-                }
-
-                if (playerPos == enemy2._pos)
-                {
-                    player.TakeDamage(1);
-                    //enemy2._pos = (5, 10);
+                    if (playerPos == enemy.CheckPOS())
+                    {
+                        player.TakeDamage(1);
+                    }
                 }
             }
         }
@@ -76,9 +69,9 @@ namespace GameProgII_FirstPlayable_BenF
         static void Main(string[] args)
         {
             //add to lists
-            pickups.Add(pickup1);
+            pickups.Add(coin1);
             pickups.Add(healthPickup);
-            pickups.Add(pickup3);
+            pickups.Add(coin2);
 
             enemies.Add(enemy1);
             enemies.Add(enemy2);
@@ -94,7 +87,7 @@ namespace GameProgII_FirstPlayable_BenF
                 Console.WriteLine($"Player Health: {player._health}");
                 Console.WriteLine($"{enemy1._model} Health: {enemy1._health}");
                 Console.WriteLine($"{enemy2._model} Health: {enemy2._health}");
-                Console.WriteLine($"Coins: {coins}");
+                Console.WriteLine($"Coins: {player._coins}");
 
                 foreach(Pickup pickup in pickups)
                 {
@@ -131,7 +124,7 @@ namespace GameProgII_FirstPlayable_BenF
                         Console.WriteLine($"Player Health: {player._health}");
                         Console.WriteLine($"{enemy1._model} Health: {enemy1._health}");
                         Console.WriteLine($"{enemy2._model} Health: {enemy2._health}");
-                        Console.WriteLine($"Coins: {coins}");
+                        Console.WriteLine($"Coins: {player._coins}");
 
                         foreach (Pickup pickup in pickups)
                         {

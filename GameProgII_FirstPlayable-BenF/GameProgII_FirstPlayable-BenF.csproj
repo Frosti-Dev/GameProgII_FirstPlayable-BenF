@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coin.cs" />
     <Compile Include="ConfusedEnemy.cs" />
     <Compile Include="HealthItem.cs" />
     <Compile Include="NormalEnemy.cs" />

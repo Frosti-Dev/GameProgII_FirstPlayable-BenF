@@ -6,23 +6,17 @@ using System.Threading.Tasks;
 
 namespace GameProgII_FirstPlayable_BenF
 {
-    class HealthItem : Pickup
+    internal class Coin : Pickup
     {
         Player _player;
-
-        public HealthItem((int, int) pos, char model, Player player) : base(pos, model)
+        public Coin((int, int) pos, char model, Player player) : base(pos, model)
         {
             _player = player;
         }
 
-
         public override void Destroy()
         {
-            _player._health += 3;
-            if (_player._health < 10 )
-            {
-                _player._health = 10;
-            }
+            _player._coins++;
 
             _isDestroyed = true;
             _pos = (0, 0);
