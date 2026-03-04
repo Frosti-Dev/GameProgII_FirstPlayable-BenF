@@ -11,19 +11,20 @@ namespace GameProgII_FirstPlayable_BenF
     internal class NormalEnemy : ICharacter
     {
         public (int, int) _pos;
+
         public int _health;
-        public bool _alive;
+        public bool _isAlive = true;
+
         public char _model;
         public Player _target;
 
-        public bool _isAlive = true; 
+        public int _attack;
 
 
-        public NormalEnemy((int, int) pos, int health, bool alive, char model, Player target)
+        public NormalEnemy((int, int) pos, int health, char model, Player target)
         {
             _pos = pos;
             _health = health;
-            _alive = alive;
             _model = model;
             _target = target;
         }
@@ -140,15 +141,18 @@ namespace GameProgII_FirstPlayable_BenF
                 }
             }
 
-            if (_health == 0)
+            if (_health < 0)
             {
+                _health = 0;
                 Destroy();
+                _pos = (0, 0);
             }
         }
 
         public void Destroy()
         {
             _isAlive = false;
+            _pos = (0,0);
         }
 
         public bool CheckAlive()
@@ -167,6 +171,11 @@ namespace GameProgII_FirstPlayable_BenF
         public (int, int) CheckPOS()
         {
             return _pos;
+        }
+
+        public int CheckAttack()
+        {
+            return _attack;
         }
     }
 }

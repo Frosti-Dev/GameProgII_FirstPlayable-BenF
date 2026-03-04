@@ -13,3 +13,4 @@ C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayab
 C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.csproj.CoreCompileInputs.cache
 C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.exe
 C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.pdb
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Map\MapFile.txt

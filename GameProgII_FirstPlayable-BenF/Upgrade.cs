@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace GameProgII_FirstPlayable_BenF
 {
-    class HealthItem : Pickup
+    class Upgrade : Pickup
     {
         Player _player;
-
-        public HealthItem((int, int) pos, char model, Player player) : base(pos, model)
+        public Upgrade((int, int) pos, char model, Player player) : base(pos, model)
         {
             _player = player;
         }
 
-
         public override void Destroy()
         {
-            _player._health += 3;
+            _player._attack = 3;
 
             _isDestroyed = true;
             _pos = (0, 0);
         }
+
     }
 }

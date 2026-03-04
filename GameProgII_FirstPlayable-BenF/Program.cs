@@ -14,16 +14,18 @@ namespace GameProgII_FirstPlayable_BenF
         static bool hasWon;
         static bool isPlayerTurn;
 
+
         static Map map = new Map(mapScale);
-        static Player player = new Player(3, 3, 25, map, 10, mapScale);
+        static Player player = new Player(6, 5, map, 10, mapScale);
 
         static List<ICharacter> enemies = new List<ICharacter>();
-        static NormalEnemy enemy1 = new NormalEnemy((10, 10), 10, true, 'E', player);
-        static ConfusedEnemy enemy2 = new ConfusedEnemy((5, 10), 10, true, '?', player);
+        static NormalEnemy enemy1 = new NormalEnemy((10, 10), 10, 'E', player);
+        static ConfusedEnemy enemy2 = new ConfusedEnemy((5, 10), 10, '?', mapScale, player);
+        static HeavyEnemy enemy3 = new HeavyEnemy((15, 10), 15, 'H', player);
 
         static List<IEntity> pickups = new List<IEntity>();
-        static Coin coin1 = new Coin((11, 3), 'o', player);
-        static Coin coin2 = new Coin((21, 11), 'o', player);
+        static Coin coin = new Coin((11, 3), 'o', player);
+        static Upgrade upgrade = new Upgrade((21, 11), '/', player);
         static HealthItem healthPickup = new HealthItem((21, 3), '+', player);
        
 
@@ -39,7 +41,7 @@ namespace GameProgII_FirstPlayable_BenF
                 {
                     if (playerPos == enemy.CheckPOS())
                     {
-                        enemy.TakeDamage(1);
+                        enemy.TakeDamage(player._attack);
                     }
                 }
                 
@@ -60,7 +62,7 @@ namespace GameProgII_FirstPlayable_BenF
                 {
                     if (playerPos == enemy.CheckPOS())
                     {
-                        player.TakeDamage(1);
+                        player.TakeDamage(enemy.CheckAttack());
                     }
                 }
             }
@@ -68,13 +70,16 @@ namespace GameProgII_FirstPlayable_BenF
 
         static void Main(string[] args)
         {
+            map.MakeOccupiedMap();
+
             //add to lists
-            pickups.Add(coin1);
+            pickups.Add(coin);
             pickups.Add(healthPickup);
-            pickups.Add(coin2);
+            pickups.Add(upgrade);
 
             enemies.Add(enemy1);
             enemies.Add(enemy2);
+            enemies.Add(enemy3);
 
             while (player._isAlive)
             {
@@ -85,11 +90,15 @@ namespace GameProgII_FirstPlayable_BenF
                 map.DisplayMap();
 
                 Console.WriteLine($"Player Health: {player._health}");
+                Console.WriteLine($"Player Attack: {player._attack}");
+                Console.WriteLine($"Coins: {player._coins}");
                 Console.WriteLine($"{enemy1._model} Health: {enemy1._health}");
                 Console.WriteLine($"{enemy2._model} Health: {enemy2._health}");
-                Console.WriteLine($"Coins: {player._coins}");
+                Console.WriteLine($"{enemy3._model} Health: {enemy3._health}");
 
-                foreach(Pickup pickup in pickups)
+
+
+                foreach (Pickup pickup in pickups)
                 {
                     if (!pickup._isDestroyed)
                     {
@@ -121,10 +130,13 @@ namespace GameProgII_FirstPlayable_BenF
                         Console.Clear();
                         map.DisplayMap();
 
+
                         Console.WriteLine($"Player Health: {player._health}");
+                        Console.WriteLine($"Player Attack: {player._attack}");
+                        Console.WriteLine($"Coins: {player._coins}");
                         Console.WriteLine($"{enemy1._model} Health: {enemy1._health}");
                         Console.WriteLine($"{enemy2._model} Health: {enemy2._health}");
-                        Console.WriteLine($"Coins: {player._coins}");
+                        Console.WriteLine($"{enemy3._model} Health: {enemy3._health}");
 
                         foreach (Pickup pickup in pickups)
                         {
@@ -159,19 +171,33 @@ namespace GameProgII_FirstPlayable_BenF
                     }
                 }
 
-                Debug.WriteLine($"Bound Check: {map._isOccupied[player._bound]}");
-
                 CheckHits();
 
                 foreach(ICharacter enemy in enemies)
                 {
+                    int enemiesDead = 0;
+                    if (enemy.CheckAlive() == false)
+                    {
+                        enemiesDead++;
+                        
+                    }
+
                     if (enemy.CheckAlive() == true)
+                    {
+                        continue;
+                    }
+
+                    if(enemiesDead == enemies.Count)
                     {
                         hasWon = true;
                         break;
                     }
                 }
 
+                if (hasWon)
+                {
+                    break;
+                }
              
 
                 if (!player._isAlive)

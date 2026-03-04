@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GameProgII_FirstPlayable_BenF
 {
-    class ConfusedEnemy : ICharacter
+    class HeavyEnemy : ICharacter
     {
         public (int, int) _pos;
 
@@ -14,25 +17,19 @@ namespace GameProgII_FirstPlayable_BenF
         public bool _isAlive = true;
 
         public char _model;
-        public int _limiter;
-
         public Player _target;
 
-        public int _attack;
+        public int _attack = 4;
 
 
-        private Random r = new Random();
-
-
-        public ConfusedEnemy((int, int) pos, int health, char model, int limiter, Player target)
+        public HeavyEnemy((int, int) pos, int health, char model, Player target)
         {
             _pos = pos;
             _health = health;
             _model = model;
-            _limiter = limiter;
             _target = target;
-            
         }
+
 
         public void Draw()
         {
@@ -48,52 +45,96 @@ namespace GameProgII_FirstPlayable_BenF
 
         public void Update()
         {
-            int rNum = r.Next(0, 4);
-
-            if (rNum == 0)
+            Random random = new Random();
+            int rNum = random.Next(0, 2);
+            if (Absolute(_target._posX - _pos.Item1) > Absolute(_target._posY - _pos.Item2))
             {
-                _pos.Item1 -= 1;
-
-                if (_pos.Item1 <= 0)
+                //aligns enemy x with player x
+                if (_pos.Item1 > _target._posX)
                 {
-                    _pos.Item1 += 1;
-                }
-            }
+                    if (rNum == 1)
+                    {
+                        _pos.Item1 -= 1;
+                    }
 
-            else if (rNum == 1)
-            {
-                _pos.Item1 += 1;
-
-                if (_pos.Item1 > 24 * _limiter)
-                {
-                    _pos.Item1 -= 1;
-                }
-            }
-
-            else if (rNum == 2)
-            {
-                 _pos.Item2 -= 1;
-
-                if (_pos.Item2 <= 0)
-                {
-                    _pos.Item2 += 1;
+                    else
+                    {
+                        //do nothing
+                    }
                 }
 
+                else if (_pos.Item1 < _target._posX)
+                {
+                    if (rNum == 1)
+                    {
+                        _pos.Item1 += 1;
+                    }
+
+                    else
+                    {
+                        //do nothing
+                    }
+                }
+                else
+                {
+                    //do nothing
+                }
             }
 
             else
             {
-                _pos.Item2 += 1;
-
-                if (_pos.Item2 > 12 * _limiter)
+                //aligns enemy y with player y
+                if (_pos.Item2 > _target._posY)
                 {
-                    _pos.Item2 -= 1;
+                    if (rNum == 1)
+                    {
+                        _pos.Item2 -= 1;
+                    }
+
+                    else
+                    {
+                        //do nothing
+                    }
+                }
+
+                else if (_pos.Item2 < _target._posY)
+                {
+                    if (rNum == 1)
+                    {
+                        _pos.Item2 += 1;
+                    }
+
+                    else
+                    {
+                        //do nothing
+                    }
+                }
+                else
+                {
+                    //do nothing
                 }
             }
 
+            #region Debug Lines
+            //Debug.WriteLine($"{Normalize(_target._posX - _pos.Item1)}, {Normalize(_target._posY - _pos.Item2)}"); ///(relative to the target pos)
+            //Debug.WriteLine($"{_model} Pos: {_pos}"); ///(pos)
+            #endregion
         }
 
-        
+        private int Absolute(int value)
+        {
+            if (value < 0)
+            {
+                value -= value * 2;
+                return value;
+            }
+
+            else
+            {
+                return value;
+            }
+
+        }
 
         public void TakeDamage(int amount)
         {
@@ -137,7 +178,6 @@ namespace GameProgII_FirstPlayable_BenF
 
             if (_health < 0)
             {
-                _health = 0;
                 Destroy();
                 _pos = (0, 0);
             }
@@ -145,22 +185,9 @@ namespace GameProgII_FirstPlayable_BenF
 
         public void Destroy()
         {
+            _health = 0;
             _isAlive = false;
-        }
-
-        private int Absolute(int value)
-        {
-            if (value < 0)
-            {
-                value -= value * 2;
-                return value;
-            }
-
-            else
-            {
-                return value;
-            }
-
+            _pos = (0, 0);
         }
 
         public bool CheckAlive()
@@ -180,6 +207,7 @@ namespace GameProgII_FirstPlayable_BenF
         {
             return _pos;
         }
+
         public int CheckAttack()
         {
             return _attack;

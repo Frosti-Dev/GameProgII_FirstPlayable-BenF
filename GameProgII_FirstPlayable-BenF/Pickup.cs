@@ -30,6 +30,7 @@ namespace GameProgII_FirstPlayable_BenF
 
                 Console.SetCursorPosition(_pos.Item1, _pos.Item2);
                 Console.ForegroundColor = ConsoleColor.Yellow;
+
             }
             
         }
