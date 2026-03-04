@@ -9,6 +9,8 @@ namespace GameProgII_FirstPlayable_BenF
 {
     internal interface ICharacter : IEntity
     {
+        bool CheckAlive();
+
         void Update();
 
         void TakeDamage(int amount);

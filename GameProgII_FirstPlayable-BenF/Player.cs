@@ -13,16 +13,20 @@ namespace GameProgII_FirstPlayable_BenF
         public int _posY;
         public int _health;
         public int _limiter;
+        public int _bound;
+        public Map _map;
         public (int, int) _prevPOS;
 
         public bool _isAlive = true;
 
-        public Player(int posX, int posY, int health, int limiter)
+        public Player(int posX, int posY, int bound, Map map, int health, int limiter)
         {
             _posX = posX;
             _posY = posY;
+            _bound = bound;
             _health = health;
             _limiter = limiter;
+            _map = map;
         }
 
         public void Draw()
@@ -40,19 +44,38 @@ namespace GameProgII_FirstPlayable_BenF
             switch (keyinfo.Key)
             {
                 case ConsoleKey.W:
+
+                    _bound -= 12;
                     _posY -= 1;
+
+
                     if (_posY <= 0)
                     {
+                        _bound += 12;
+                        _posY += 1;
+                    }
+
+                    if (_map._isOccupied[_bound] == true)
+                    {
+                        _bound += 12;
                         _posY += 1;
                     }
                     break;
 
                 case ConsoleKey.A:
 
+                    _bound -= 1;
                     _posX -= 1;
 
                     if (_posX <= 0)
                     {
+                        _bound += 1;
+                        _posX += 1;
+                    }
+
+                    if( _map._isOccupied[_bound] == true)
+                    {
+                        _bound += 1;
                         _posX += 1;
                     }
 
@@ -60,20 +83,36 @@ namespace GameProgII_FirstPlayable_BenF
 
                 case ConsoleKey.S:
 
+                    _bound += 12;
                     _posY += 1;
 
                     if (_posY > 12 * _limiter)
                     {
+                        _bound -= 12;
+                        _posY -= 1;
+                    }
+
+                    if (_map._isOccupied[_bound])
+                    {
+                        _bound -= 12;
                         _posY -= 1;
                     }
                     break;
 
                 case ConsoleKey.D:
 
+                    _bound += 1;
                     _posX += 1;
 
                     if (_posX > 24 * _limiter)
                     {
+                        _bound -= 1;
+                        _posX -= 1;
+                    }
+                    
+                    if (_map._isOccupied[_bound])
+                    {
+                        _bound -= 1;
                         _posX -= 1;
                     }
                     break;
@@ -87,6 +126,8 @@ namespace GameProgII_FirstPlayable_BenF
             }
 
             Debug.WriteLine($"Player Pos: {_posX},{_posY}"); ///(pos)
+            Debug.WriteLine($"Bound Number: {_bound} ");
+           
 
         }
 
@@ -103,6 +144,19 @@ namespace GameProgII_FirstPlayable_BenF
         public void Destroy()
         {
             _isAlive = false;
+        }
+
+        public bool CheckAlive()
+        {
+            if (_isAlive)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
         }
 
     }

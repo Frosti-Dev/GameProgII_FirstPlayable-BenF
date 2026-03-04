@@ -39,5 +39,6 @@ namespace GameProgII_FirstPlayable_BenF
             _isDestroyed = true;
             _pos = (0, 0);
         }
+
     }
 }

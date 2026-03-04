@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,15 +16,15 @@ namespace GameProgII_FirstPlayable_BenF
         static int coins;
 
         static Map map = new Map(mapScale);
-        static Player player = new Player(5, 5, 10, mapScale);
+        static Player player = new Player(3, 3, 25, map, 10, mapScale);
 
-        static List<Enemy> enemies = new List<Enemy>();
-        static Enemy enemy1 = new Enemy((10, 10), 10, true, '1', player);
-        static Enemy enemy2 = new Enemy((5, 10), 10, true, '2', player);
+        static List<ICharacter> enemies = new List<ICharacter>();
+        static NormalEnemy enemy1 = new NormalEnemy((10, 10), 10, true, 'E', player);
+        static ConfusedEnemy enemy2 = new ConfusedEnemy((5, 10), 10, true, '?', player);
 
         static List<Pickup> pickups = new List<Pickup>();
-        static Pickup pickup1 = new Pickup((10, 2), 'o');
-        static Pickup pickup2 = new Pickup((21, 2), 'o');
+        static Pickup pickup1 = new Pickup((11, 3), 'o');
+        static Pickup pickup2 = new Pickup((21, 3), 'o');
         static Pickup pickup3 = new Pickup((21, 11), 'o');
 
         #endregion
@@ -94,16 +95,21 @@ namespace GameProgII_FirstPlayable_BenF
 
                 foreach(Pickup pickup in pickups)
                 {
-                    pickup.Draw();
+                    if (!pickup._isDestroyed)
+                    {
+                        pickup.Draw();
+                    }
                 }
                 
-                foreach(Enemy enemy in enemies)
+                foreach(ICharacter enemy in enemies)
                 {
-                    if (enemy._isAlive)
+                    if (enemy.CheckAlive() == true)
                     {
                         enemy.Draw();
                     }
                 }
+
+                
 
                 player.Draw();
                 CheckHits();
@@ -126,17 +132,21 @@ namespace GameProgII_FirstPlayable_BenF
 
                         foreach (Pickup pickup in pickups)
                         {
-                            pickup.Draw();
+                            if (!pickup._isDestroyed)
+                            {
+                                pickup.Draw();
+                            }
                         }
 
-                        foreach (Enemy enemy in enemies)
+                        foreach (ICharacter enemy in enemies)
                         {
-                            if (enemy._isAlive)
+                            if (enemy.CheckAlive() == true)
                             {
                                 enemy.Draw();
                             }
                         }
 
+                        
                         player.Draw();
                         CheckHits();
 
@@ -145,24 +155,28 @@ namespace GameProgII_FirstPlayable_BenF
                     isPlayerTurn = false;
                 }
                 
-                foreach(Enemy enemy in enemies)
+                foreach(ICharacter enemy in enemies)
                 {
-                    if (enemy._isAlive)
+                    if (enemy.CheckAlive() == true)
                     {
                         enemy.Update();
                     }
                 }
-                
+
+                Debug.WriteLine($"Bound Check: {map._isOccupied[player._bound]}");
+
                 CheckHits();
 
-                foreach(Enemy enemy in enemies)
+                foreach(ICharacter enemy in enemies)
                 {
-                    if (!enemy._isAlive)
+                    if (enemy.CheckAlive() == true)
                     {
                         hasWon = true;
                         break;
                     }
                 }
+
+             
 
                 if (!player._isAlive)
                 {

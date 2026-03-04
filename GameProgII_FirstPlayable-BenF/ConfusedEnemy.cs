@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GameProgII_FirstPlayable_BenF
 {
-    internal class Enemy : ICharacter
+    class ConfusedEnemy : ICharacter
     {
         public (int, int) _pos;
         public int _health;
@@ -16,10 +14,11 @@ namespace GameProgII_FirstPlayable_BenF
         public char _model;
         public Player _target;
 
-        public bool _isAlive = true; 
+        private Random r = new Random();
 
+        public bool _isAlive = true;
 
-        public Enemy((int, int) pos, int health, bool alive, char model, Player target)
+        public ConfusedEnemy((int, int) pos, int health, bool alive, char model, Player target)
         {
             _pos = pos;
             _health = health;
@@ -27,7 +26,6 @@ namespace GameProgII_FirstPlayable_BenF
             _model = model;
             _target = target;
         }
-
 
         public void Draw()
         {
@@ -43,62 +41,31 @@ namespace GameProgII_FirstPlayable_BenF
 
         public void Update()
         {
-            if (Absolute(_target._posX - _pos.Item1) > Absolute(_target._posY - _pos.Item2))
-            {
-                //aligns enemy x with player x
-                if (_pos.Item1 > _target._posX)
-                {
-                    _pos.Item1 -= 1;
-                }
+            int rNum = r.Next(0, 4);
 
-                else if (_pos.Item1 < _target._posX)
-                {
-                    _pos.Item1 += 1;
-                }
-                else
-                {
-                    //do nothing
-                }
-            }
-            
-            else
+            if (rNum == 0)
             {
-                //aligns enemy y with player y
-                if (_pos.Item2 > _target._posY)
-                {
-                    _pos.Item2 -= 1;
-                }
-
-                else if (_pos.Item2 < _target._posY)
-                {
-                    _pos.Item2 += 1;
-                }
-                else
-                {
-                    //do nothing
-                }
+                _pos.Item1 -= 1;
             }
 
-            #region Debug Lines
-            //Debug.WriteLine($"{Normalize(_target._posX - _pos.Item1)}, {Normalize(_target._posY - _pos.Item2)}"); ///(relative to the target pos)
-            //Debug.WriteLine($"{_model} Pos: {_pos}"); ///(pos)
-            #endregion
-        }
-
-        private int Absolute(int value)
-        {
-            if(value < 0)
+            else if (rNum == 1)
             {
-                value -= value * 2;
-                return value;
+                _pos.Item1 += 1;
+            }
+
+            else if (rNum == 2)
+            {
+                 _pos.Item2 -= 1;
             }
 
             else
             {
-                return value;
+                _pos.Item2 += 1;
             }
-    
+
         }
+
+        
 
         public void TakeDamage(int amount)
         {
@@ -124,7 +91,7 @@ namespace GameProgII_FirstPlayable_BenF
 
             else
             {
-                
+
                 if (_pos.Item2 > _target._prevPOS.Item2)
                 {
                     _pos.Item2 += 2;
@@ -149,6 +116,34 @@ namespace GameProgII_FirstPlayable_BenF
         public void Destroy()
         {
             _isAlive = false;
+        }
+
+        private int Absolute(int value)
+        {
+            if (value < 0)
+            {
+                value -= value * 2;
+                return value;
+            }
+
+            else
+            {
+                return value;
+            }
+
+        }
+
+        public bool CheckAlive()
+        {
+            if (_isAlive)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
         }
     }
 }

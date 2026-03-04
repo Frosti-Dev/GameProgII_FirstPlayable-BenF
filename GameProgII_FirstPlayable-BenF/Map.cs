@@ -71,12 +71,14 @@ namespace GameProgII_FirstPlayable_BenF
                                 Console.ForegroundColor = ConsoleColor.DarkGray;
 
                                 _isOccupied.Add(true);
-                                
+                                _isOccupied.Add(true);
+
                             }
 
                             if (map[i, j] == '~')
                             {
                                 Console.ForegroundColor = ConsoleColor.Blue;
+                                _isOccupied.Add(true);
                                 _isOccupied.Add(true);
                             }
 
@@ -84,11 +86,13 @@ namespace GameProgII_FirstPlayable_BenF
                             {
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 _isOccupied.Add(true);
+                                _isOccupied.Add(true);
                             }
 
                             if (map[i,j] == '`')
                             {
                                 Console.ForegroundColor = ConsoleColor.DarkGreen;
+                                _isOccupied.Add(false);
                                 _isOccupied.Add(false);
                             }
 
@@ -160,3 +164,4 @@ namespace GameProgII_FirstPlayable_BenF
 {'`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
 {'`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
 */
+
