@@ -159,5 +159,10 @@ namespace GameProgII_FirstPlayable_BenF
             }
         }
 
+        public (int,int) CheckPOS()
+        {
+            return (_posX, _posY);
+        }
+
     }
 }

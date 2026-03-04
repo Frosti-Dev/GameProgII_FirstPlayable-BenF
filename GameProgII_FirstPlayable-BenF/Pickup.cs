@@ -19,7 +19,7 @@ namespace GameProgII_FirstPlayable_BenF
             _model = model;
         }
 
-        public void Draw()
+        public virtual void Draw()
         {
             if (!_isDestroyed)
             {
@@ -34,7 +34,7 @@ namespace GameProgII_FirstPlayable_BenF
             
         }
 
-        public void Destroy()
+        public virtual void Destroy()
         {
             _isDestroyed = true;
             _pos = (0, 0);

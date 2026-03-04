@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfusedEnemy.cs" />
+    <Compile Include="HealthItem.cs" />
     <Compile Include="NormalEnemy.cs" />
     <Compile Include="ICharacter.cs" />
     <Compile Include="IEntity.cs" />

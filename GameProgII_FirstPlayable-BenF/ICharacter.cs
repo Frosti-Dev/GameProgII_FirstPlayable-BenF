@@ -11,6 +11,8 @@ namespace GameProgII_FirstPlayable_BenF
     {
         bool CheckAlive();
 
+        (int, int) CheckPOS();
+
         void Update();
 
         void TakeDamage(int amount);
