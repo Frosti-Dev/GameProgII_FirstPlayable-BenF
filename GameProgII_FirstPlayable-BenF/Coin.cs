@@ -14,11 +14,11 @@ namespace GameProgII_FirstPlayable_BenF
             _player = player;
         }
 
-        public override void Destroy()
+        public override void Use()
         {
             _player._coins++;
 
-            _isDestroyed = true;
+            _isUsed = true;
             _pos = (0, 0);
         }
     }

@@ -13,7 +13,9 @@ namespace GameProgII_FirstPlayable_BenF
 
         int CheckAttack();
 
-        (int, int) CheckPOS();
+        (int, int) CheckPOS(bool prev);
+
+        void SetPOS((int, int) pos);
 
         void Update();
 

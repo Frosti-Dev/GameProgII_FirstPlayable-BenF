@@ -10,6 +10,6 @@ namespace GameProgII_FirstPlayable_BenF
     {
         void Draw();
 
-        void Destroy();
+        void Use();
     }
 }

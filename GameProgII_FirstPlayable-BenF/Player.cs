@@ -133,11 +133,11 @@ namespace GameProgII_FirstPlayable_BenF
             if (_health < 0)
             {
                 _health = 0;    
-                Destroy();
+                Use();
             }
         }
 
-        public void Destroy()
+        public void Use()
         {
             _isAlive = false;
         }
@@ -155,9 +155,23 @@ namespace GameProgII_FirstPlayable_BenF
             }
         }
 
-        public (int,int) CheckPOS()
+        public (int,int) CheckPOS(bool prev)
         {
-            return (_posX, _posY);
+            if (prev)
+            {
+                return _prevPOS;
+            }
+
+            else
+            {
+                return (_posX, _posY);
+            }
+        }
+
+        public void SetPOS((int,int) pos)
+        {
+            _posX = pos.Item1;
+            _posY = pos.Item2;
         }
 
         public int CheckAttack()

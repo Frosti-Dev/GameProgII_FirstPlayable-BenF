@@ -19,7 +19,7 @@ namespace GameProgII_FirstPlayable_BenF
         static Player player = new Player(6, 5, map, 10, mapScale);
 
         static List<ICharacter> enemies = new List<ICharacter>();
-        static NormalEnemy enemy1 = new NormalEnemy((10, 10), 10, 'E', player);
+        static Enemy enemy1 = new Enemy((10, 10), 10, 'E', player);
         static ConfusedEnemy enemy2 = new ConfusedEnemy((5, 10), 10, '?', mapScale, player);
         static HeavyEnemy enemy3 = new HeavyEnemy((15, 10), 15, 'H', player);
 
@@ -39,9 +39,11 @@ namespace GameProgII_FirstPlayable_BenF
             {
                 foreach (ICharacter enemy in enemies)
                 {
-                    if (playerPos == enemy.CheckPOS())
+                    if (playerPos == enemy.CheckPOS(false))
                     {
                         enemy.TakeDamage(player._attack);
+                        player._posX = player._prevPOS.Item1;
+                        player._posY = player._prevPOS.Item2;
                     }
                 }
                 
@@ -49,7 +51,8 @@ namespace GameProgII_FirstPlayable_BenF
                 {
                     if (playerPos == pickup._pos)
                     {
-                        pickup.Destroy();
+                        pickup.Use();
+                        player.SetPOS(player._prevPOS);
                     }
                 }
                 
@@ -60,9 +63,10 @@ namespace GameProgII_FirstPlayable_BenF
             {
                 foreach(ICharacter enemy in enemies)
                 {
-                    if (playerPos == enemy.CheckPOS())
+                    if (playerPos == enemy.CheckPOS(false))
                     {
                         player.TakeDamage(enemy.CheckAttack());
+                        enemy.SetPOS(enemy.CheckPOS(true));
                     }
                 }
             }
@@ -100,7 +104,7 @@ namespace GameProgII_FirstPlayable_BenF
 
                 foreach (Pickup pickup in pickups)
                 {
-                    if (!pickup._isDestroyed)
+                    if (!pickup._isUsed)
                     {
                         pickup.Draw();
                     }
@@ -122,10 +126,7 @@ namespace GameProgII_FirstPlayable_BenF
 
                 if (isPlayerTurn)
                 {
-                    int turnCounter = 0;
                     
-                    while(turnCounter < 2)
-                    {
                         player.Update();
                         Console.Clear();
                         map.DisplayMap();
@@ -140,7 +141,7 @@ namespace GameProgII_FirstPlayable_BenF
 
                         foreach (Pickup pickup in pickups)
                         {
-                            if (!pickup._isDestroyed)
+                            if (!pickup._isUsed)
                             {
                                 pickup.Draw();
                             }
@@ -158,8 +159,6 @@ namespace GameProgII_FirstPlayable_BenF
                         player.Draw();
                         CheckHits();
 
-                        turnCounter++;
-                    }
                     isPlayerTurn = false;
                 }
                 
@@ -179,7 +178,7 @@ namespace GameProgII_FirstPlayable_BenF
                     if (enemy.CheckAlive() == false)
                     {
                         enemiesDead++;
-                        
+                 
                     }
 
                     if (enemy.CheckAlive() == true)

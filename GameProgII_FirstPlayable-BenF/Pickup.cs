@@ -10,7 +10,7 @@ namespace GameProgII_FirstPlayable_BenF
     {
         public (int, int) _pos;
         public char _model;
-        public bool _isDestroyed;
+        public bool _isUsed;
 
         public Pickup((int,int) pos, char model)
         {
@@ -21,7 +21,7 @@ namespace GameProgII_FirstPlayable_BenF
 
         public virtual void Draw()
         {
-            if (!_isDestroyed)
+            if (!_isUsed)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.SetCursorPosition(_pos.Item1, _pos.Item2);
@@ -35,9 +35,9 @@ namespace GameProgII_FirstPlayable_BenF
             
         }
 
-        public virtual void Destroy()
+        public virtual void Use()
         {
-            _isDestroyed = true;
+            _isUsed = true;
             _pos = (0, 0);
         }
 

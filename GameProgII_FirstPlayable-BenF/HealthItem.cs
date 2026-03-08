@@ -16,11 +16,11 @@ namespace GameProgII_FirstPlayable_BenF
         }
 
 
-        public override void Destroy()
+        public override void Use()
         {
             _player._health += 3;
 
-            _isDestroyed = true;
+            _isUsed = true;
             _pos = (0, 0);
         }
     }

@@ -1,0 +1,16 @@
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\Map\MapFile.txt
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.exe.config
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.exe
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.pdb
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.csproj.AssemblyReference.cache
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.csproj.CoreCompileInputs.cache
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.exe
+C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.pdb
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\Map\MapFile.txt
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.exe.config
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.exe
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Release\GameProgII_FirstPlayable-BenF.pdb
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.csproj.AssemblyReference.cache
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.csproj.CoreCompileInputs.cache
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.exe
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Release\GameProgII_FirstPlayable-BenF.pdb

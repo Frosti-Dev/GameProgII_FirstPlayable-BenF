@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace GameProgII_FirstPlayable_BenF
 {
-    internal class NormalEnemy : ICharacter
+    internal class Enemy : ICharacter
     {
         public (int, int) _pos;
+
+        public (int, int) _prevPOS;
 
         public int _health;
         public bool _isAlive = true;
@@ -21,7 +23,7 @@ namespace GameProgII_FirstPlayable_BenF
         public int _attack;
 
 
-        public NormalEnemy((int, int) pos, int health, char model, Player target)
+        public Enemy((int, int) pos, int health, char model, Player target)
         {
             _pos = pos;
             _health = health;
@@ -42,8 +44,10 @@ namespace GameProgII_FirstPlayable_BenF
 
         }
 
-        public void Update()
+        virtual public void Update()
         {
+            _prevPOS = _pos;
+
             if (Absolute(_target._posX - _pos.Item1) > Absolute(_target._posY - _pos.Item2))
             {
                 //aligns enemy x with player x
@@ -86,7 +90,7 @@ namespace GameProgII_FirstPlayable_BenF
             #endregion
         }
 
-        private int Absolute(int value)
+        public int Absolute(int value)
         {
             if(value < 0)
             {
@@ -144,12 +148,12 @@ namespace GameProgII_FirstPlayable_BenF
             if (_health < 0)
             {
                 _health = 0;
-                Destroy();
+                Use();
                 _pos = (0, 0);
             }
         }
 
-        public void Destroy()
+        public void Use()
         {
             _isAlive = false;
             _pos = (0,0);
@@ -168,9 +172,22 @@ namespace GameProgII_FirstPlayable_BenF
             }
         }
 
-        public (int, int) CheckPOS()
+        public (int, int) CheckPOS(bool prev)
         {
-            return _pos;
+            if (prev)
+            {
+                return _prevPOS;
+            }
+
+            else
+            {
+                return _pos;
+            }
+        }
+
+        public void SetPOS((int,int) pos)
+        {
+            _pos = pos;
         }
 
         public int CheckAttack()

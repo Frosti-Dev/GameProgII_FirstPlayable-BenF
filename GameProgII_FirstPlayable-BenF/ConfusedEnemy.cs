@@ -6,48 +6,22 @@ using System.Threading.Tasks;
 
 namespace GameProgII_FirstPlayable_BenF
 {
-    class ConfusedEnemy : ICharacter
+    class ConfusedEnemy : Enemy
     {
-        public (int, int) _pos;
-
-        public int _health;
-        public bool _isAlive = true;
-
-        public char _model;
         public int _limiter;
-
-        public Player _target;
-
-        public int _attack;
-
 
         private Random r = new Random();
 
 
-        public ConfusedEnemy((int, int) pos, int health, char model, int limiter, Player target)
+        public ConfusedEnemy((int, int) pos, int health, char model, int limiter, Player target) : base(pos, health, model, target)
         {
-            _pos = pos;
-            _health = health;
-            _model = model;
-            _limiter = limiter;
-            _target = target;
-            
+            _limiter = limiter;   
         }
 
-        public void Draw()
+        override public void Update()
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.SetCursorPosition(_pos.Item1, _pos.Item2);
+            _prevPOS = _pos;
 
-            Console.Write(_model);
-
-            Console.SetCursorPosition(_pos.Item1, _pos.Item2);
-            Console.ForegroundColor = ConsoleColor.White;
-
-        }
-
-        public void Update()
-        {
             int rNum = r.Next(0, 4);
 
             if (rNum == 0)
@@ -93,96 +67,5 @@ namespace GameProgII_FirstPlayable_BenF
 
         }
 
-        
-
-        public void TakeDamage(int amount)
-        {
-            _health -= amount;
-
-            if (Absolute(_target._prevPOS.Item1 - _pos.Item1) > Absolute(_target._prevPOS.Item2 - _pos.Item2))
-            {
-                //gets knocked back
-                if (_pos.Item1 > _target._prevPOS.Item1)
-                {
-                    _pos.Item1 += 2;
-                }
-
-                else if (_pos.Item1 < _target._prevPOS.Item1)
-                {
-                    _pos.Item1 -= 2;
-                }
-                else
-                {
-                    //do nothing
-                }
-            }
-
-            else
-            {
-
-                if (_pos.Item2 > _target._prevPOS.Item2)
-                {
-                    _pos.Item2 += 2;
-                }
-
-                else if (_pos.Item2 < _target._prevPOS.Item2)
-                {
-                    _pos.Item2 -= 2;
-                }
-                else
-                {
-                    //do nothing
-                }
-            }
-
-            if (_health < 0)
-            {
-                _health = 0;
-                Destroy();
-                _pos = (0, 0);
-            }
-        }
-
-        public void Destroy()
-        {
-            _isAlive = false;
-        }
-
-        private int Absolute(int value)
-        {
-            if (value < 0)
-            {
-                value -= value * 2;
-                return value;
-            }
-
-            else
-            {
-                return value;
-            }
-
-        }
-
-        public bool CheckAlive()
-        {
-            if (_isAlive)
-            {
-                return true;
-            }
-
-            else
-            {
-                return false;
-            }
-        }
-
-        public (int, int) CheckPOS()
-        {
-            return _pos;
-        }
-        public int CheckAttack()
-        {
-            return _attack;
-        }
     }
 }
