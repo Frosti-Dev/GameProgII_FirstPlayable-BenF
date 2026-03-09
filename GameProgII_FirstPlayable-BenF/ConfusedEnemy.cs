@@ -15,7 +15,8 @@ namespace GameProgII_FirstPlayable_BenF
 
         public ConfusedEnemy((int, int) pos, int health, char model, int limiter, Player target) : base(pos, health, model, target)
         {
-            _limiter = limiter;   
+            _limiter = limiter;
+            _attack = 1;
         }
 
         override public void Update()

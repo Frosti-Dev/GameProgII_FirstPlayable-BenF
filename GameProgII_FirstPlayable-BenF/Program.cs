@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace GameProgII_FirstPlayable_BenF
@@ -74,6 +75,8 @@ namespace GameProgII_FirstPlayable_BenF
 
         static void Main(string[] args)
         {
+            Console.CursorVisible = false;
+
             map.MakeOccupiedMap();
 
             //add to lists
@@ -204,6 +207,8 @@ namespace GameProgII_FirstPlayable_BenF
                     hasWon = false;
                     break;
                 }
+
+                //Thread.Sleep(200);
             }
 
             #region Win Conditions

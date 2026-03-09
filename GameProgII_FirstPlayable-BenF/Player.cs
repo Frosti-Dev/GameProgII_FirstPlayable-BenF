@@ -40,90 +40,93 @@ namespace GameProgII_FirstPlayable_BenF
 
         public void Update()
         {
-
-            ConsoleKeyInfo keyinfo = Console.ReadKey(true);
-
-            switch (keyinfo.Key)
+            if(true) //Console.KeyAvailable
             {
-                case ConsoleKey.W:
+                ConsoleKeyInfo keyinfo = Console.ReadKey(true);
 
-                    _posY -= 1;
+                switch (keyinfo.Key)
+                {
+                    case ConsoleKey.W:
 
-                    Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
+                        _posY--;
 
-                    if (_posY <= 0)
-                    {
-                        _posY += 1;
-                    }
+                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
 
-                    //if (_map.isOccupiedMap[_posX,_posY] == true)
-                    //{
-                    //    _posY += 1;
-                    //}
-                    break;
+                        if (_posY <= 0)
+                        {
+                            _posY++;
+                        }
 
-                case ConsoleKey.A:
+                        if (_map.isOccupiedMap[_posX, _posY] == true)
+                        {
+                            _posY++;
+                        }
+                        break;
 
-                    _posX -= 1;
+                    case ConsoleKey.A:
 
-                    Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
+                        _posX--;
 
-                    if (_posX <= 0)
-                    { 
+                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
+
+                        if (_posX <= 0)
+                        {
+                            _posX++;
+                        }
+
+                        if (_map.isOccupiedMap[_posX, _posY] == true)
+                        {
+                            _posX++;
+                        }
+
+                        break;
+
+                    case ConsoleKey.S:
+
+                        _posY++;
+
+                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
+
+                        if (_posY > 12 * _limiter)
+                        {
+                            _posY--;
+                        }
+
+                        if (_map.isOccupiedMap[_posX, _posY] == true)
+                        {
+                            _posY--;
+                        }
+                        break;
+
+                    case ConsoleKey.D:
+
                         _posX += 1;
-                    }
 
-                    //if(_map.isOccupiedMap[_posX, _posY] == true)
-                    //{
-                    //    _posX += 1;
-                    //}
+                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
 
-                    break;
+                        if (_posX > 24 * _limiter)
+                        {
+                            _posX--;
+                        }
 
-                case ConsoleKey.S:
+                        if (_map.isOccupiedMap[_posX, _posY] == true)
+                        {
+                            _posX--;
+                        }
+                        break;
 
-                    _posY += 1;
+                    case ConsoleKey.Escape:
 
-                    //Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
+                        Console.Clear();
+                        Console.WriteLine("You Quit.");
+                        Environment.Exit(0);
+                        break;
+                }
 
-                    if (_posY > 12 * _limiter)
-                    {
-                        _posY -= 1;
-                    }
+                Debug.WriteLine($"Player Pos: {_posX},{_posY}"); ///(pos)
 
-                    //if (_map.isOccupiedMap[_posX, _posY] == true)
-                    //{
-                    //    _posY -= 1;
-                    //}
-                    break;
-
-                case ConsoleKey.D:
-
-                    _posX += 1;
-
-                    //Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
-
-                    if (_posX > 24 * _limiter)
-                    {
-                        _posX -= 1;
-                    }
-                    
-                    //if (_map.isOccupiedMap[_posX, _posY] == true)
-                    //{
-                    //    _posX -= 1;
-                    //}
-                    break;
-
-                case ConsoleKey.Escape:
-
-                    Console.Clear();
-                    Console.WriteLine("You Quit.");
-                    Environment.Exit(0);
-                    break;
             }
-
-            Debug.WriteLine($"Player Pos: {_posX},{_posY}"); ///(pos)
-
+            
         }
 
         public void TakeDamage(int amount)

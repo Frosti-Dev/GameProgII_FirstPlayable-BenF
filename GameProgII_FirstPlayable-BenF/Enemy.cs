@@ -29,6 +29,8 @@ namespace GameProgII_FirstPlayable_BenF
             _health = health;
             _model = model;
             _target = target;
+
+            _attack = 1;
         }
 
 

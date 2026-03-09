@@ -47,48 +47,60 @@ namespace GameProgII_FirstPlayable_BenF
         {
             if (File.Exists(path))
             {
+                
                 for (int i = 0; i < rows; i++)
                 {
+                    Debug.WriteLine(" ");
                     for (int j = 0; j < cols; j++)
                     {
+                        
+
                         if (mapData[i] == '^')
                         {
                             isOccupiedMap[i, j] = true;
+                            Debug.Write("True(^) ");
                         }
 
                         else if (mapData[i] == '`')
                         {
                             isOccupiedMap[i,j] = false;
+                            Debug.Write("False(') ");
                         }
 
                         else if (mapData[i] == '~')
                         {
                             isOccupiedMap[i, j] = true;
+                            Debug.Write("True(~) ");
                         }
 
                         else if (mapData[i] == '*')
                         {
                             isOccupiedMap[i, j] = true;
+                            Debug.Write("True(*) ");
                         }
 
                         else if (mapData[i] == ' ')
                         {
                             isOccupiedMap[i, j] = false;
+                            Debug.Write("False() ");
                         }
 
                         else if (mapData[i] == '|')
                         {
                             isOccupiedMap[i, j] = true;
+                            Debug.Write("True(|) ");
                         }
 
                         else if (mapData[i] == '-')
                         {
                             isOccupiedMap[i, j] = true;
+                            Debug.Write("True(-) ");
                         }
 
                         else
                         {
                             isOccupiedMap[i, j] = false;
+                            Debug.Write("False(else) ");
                         }
                     }
                 }
