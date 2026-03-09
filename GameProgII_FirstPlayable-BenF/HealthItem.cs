@@ -16,7 +16,7 @@ namespace GameProgII_FirstPlayable_BenF
         }
 
 
-        public override void Use()
+        public override void Destroy()
         {
             _player._health += 3;
 

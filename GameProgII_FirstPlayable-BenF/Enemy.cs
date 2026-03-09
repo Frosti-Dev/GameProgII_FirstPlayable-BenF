@@ -19,16 +19,18 @@ namespace GameProgII_FirstPlayable_BenF
 
         public char _model;
         public Player _target;
+        public Map _map;
 
         public int _attack;
 
 
-        public Enemy((int, int) pos, int health, char model, Player target)
+        public Enemy((int, int) pos, int health, char model, Player target, Map map)
         {
             _pos = pos;
             _health = health;
             _model = model;
             _target = target;
+            _map = map;
 
             _attack = 1;
         }
@@ -55,12 +57,22 @@ namespace GameProgII_FirstPlayable_BenF
                 //aligns enemy x with player x
                 if (_pos.Item1 > _target._posX)
                 {
-                    _pos.Item1 -= 1;
+                    _pos.Item1--;
+
+                    if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
+                    {
+                        _pos = _prevPOS;
+                    }
                 }
 
                 else if (_pos.Item1 < _target._posX)
                 {
-                    _pos.Item1 += 1;
+                    _pos.Item1++;
+
+                    if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
+                    {
+                        _pos = _prevPOS;
+                    }
                 }
                 else
                 {
@@ -73,12 +85,22 @@ namespace GameProgII_FirstPlayable_BenF
                 //aligns enemy y with player y
                 if (_pos.Item2 > _target._posY)
                 {
-                    _pos.Item2 -= 1;
+                    _pos.Item2--;
+
+                    if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
+                    {
+                        _pos = _prevPOS;
+                    }
                 }
 
                 else if (_pos.Item2 < _target._posY)
                 {
-                    _pos.Item2 += 1;
+                    _pos.Item2++;
+
+                    if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
+                    {
+                        _pos = _prevPOS;
+                    }
                 }
                 else
                 {
@@ -150,12 +172,12 @@ namespace GameProgII_FirstPlayable_BenF
             if (_health < 0)
             {
                 _health = 0;
-                Use();
+                Destroy();
                 _pos = (0, 0);
             }
         }
 
-        public void Use()
+        public void Destroy()
         {
             _isAlive = false;
             _pos = (0,0);

@@ -22,3 +22,4 @@ C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayabl
 C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.csproj.CoreCompileInputs.cache
 C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.exe
 C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.pdb
+C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Map\MapFile.txt

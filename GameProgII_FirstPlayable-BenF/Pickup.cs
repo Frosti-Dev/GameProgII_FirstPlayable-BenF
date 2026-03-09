@@ -35,7 +35,7 @@ namespace GameProgII_FirstPlayable_BenF
             
         }
 
-        public virtual void Use()
+        public virtual void Destroy()
         {
             _isUsed = true;
             _pos = (0, 0);

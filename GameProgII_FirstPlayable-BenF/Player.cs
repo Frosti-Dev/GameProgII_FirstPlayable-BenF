@@ -16,18 +16,16 @@ namespace GameProgII_FirstPlayable_BenF
         public int _health;
         public bool _isAlive = true;
 
-        public int _limiter;
         public Map _map;
 
         public int _coins;
         public int _attack = 1;
         
-        public Player(int posX, int posY, Map map, int health, int limiter)
+        public Player(int posX, int posY, Map map, int health)
         {
             _posX = posX;
             _posY = posY;
             _health = health;
-            _limiter = limiter;
             _map = map;
         }
 
@@ -52,11 +50,6 @@ namespace GameProgII_FirstPlayable_BenF
 
                         Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
 
-                        if (_posY <= 0)
-                        {
-                            _posY++;
-                        }
-
                         if (_map.isOccupiedMap[_posX, _posY] == true)
                         {
                             _posY++;
@@ -69,11 +62,7 @@ namespace GameProgII_FirstPlayable_BenF
 
                         Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
 
-                        if (_posX <= 0)
-                        {
-                            _posX++;
-                        }
-
+                        
                         if (_map.isOccupiedMap[_posX, _posY] == true)
                         {
                             _posX++;
@@ -87,11 +76,7 @@ namespace GameProgII_FirstPlayable_BenF
 
                         Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
 
-                        if (_posY > 12 * _limiter)
-                        {
-                            _posY--;
-                        }
-
+                        
                         if (_map.isOccupiedMap[_posX, _posY] == true)
                         {
                             _posY--;
@@ -100,14 +85,9 @@ namespace GameProgII_FirstPlayable_BenF
 
                     case ConsoleKey.D:
 
-                        _posX += 1;
+                        _posX++;
 
                         Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
-
-                        if (_posX > 24 * _limiter)
-                        {
-                            _posX--;
-                        }
 
                         if (_map.isOccupiedMap[_posX, _posY] == true)
                         {
@@ -133,14 +113,14 @@ namespace GameProgII_FirstPlayable_BenF
         {
             _health -= amount; 
 
-            if (_health < 0)
+            if (_health <= 0)
             {
                 _health = 0;    
-                Use();
+                Destroy();
             }
         }
 
-        public void Use()
+        public void Destroy()
         {
             _isAlive = false;
         }

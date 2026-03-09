@@ -8,14 +8,10 @@ namespace GameProgII_FirstPlayable_BenF
 {
     class ConfusedEnemy : Enemy
     {
-        public int _limiter;
-
         private Random r = new Random();
 
-
-        public ConfusedEnemy((int, int) pos, int health, char model, int limiter, Player target) : base(pos, health, model, target)
+        public ConfusedEnemy((int, int) pos, int health, char model, Player target, Map map) : base(pos, health, model, target, map)
         {
-            _limiter = limiter;
             _attack = 1;
         }
 
@@ -27,42 +23,42 @@ namespace GameProgII_FirstPlayable_BenF
 
             if (rNum == 0)
             {
-                _pos.Item1 -= 1;
+                _pos.Item1--; ;
 
-                if (_pos.Item1 <= 0)
+                if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
                 {
-                    _pos.Item1 += 1;
+                    _pos = _prevPOS;
                 }
             }
 
             else if (rNum == 1)
             {
-                _pos.Item1 += 1;
+                _pos.Item1++;
 
-                if (_pos.Item1 > 24 * _limiter)
+                if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
                 {
-                    _pos.Item1 -= 1;
+                    _pos = _prevPOS;
                 }
             }
 
             else if (rNum == 2)
             {
-                 _pos.Item2 -= 1;
+                 _pos.Item2--;
 
-                if (_pos.Item2 <= 0)
+                if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
                 {
-                    _pos.Item2 += 1;
+                    _pos = _prevPOS;
                 }
 
             }
 
             else
             {
-                _pos.Item2 += 1;
+                _pos.Item2++;
 
-                if (_pos.Item2 > 12 * _limiter)
+                if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
                 {
-                    _pos.Item2 -= 1;
+                    _pos = _prevPOS;
                 }
             }
 

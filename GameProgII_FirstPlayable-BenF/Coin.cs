@@ -14,7 +14,7 @@ namespace GameProgII_FirstPlayable_BenF
             _player = player;
         }
 
-        public override void Use()
+        public override void Destroy()
         {
             _player._coins++;
 

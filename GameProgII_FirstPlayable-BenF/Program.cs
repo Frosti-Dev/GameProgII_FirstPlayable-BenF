@@ -17,12 +17,12 @@ namespace GameProgII_FirstPlayable_BenF
 
 
         static Map map = new Map(mapScale);
-        static Player player = new Player(6, 5, map, 10, mapScale);
+        static Player player = new Player(6, 5, map, 10);
 
         static List<ICharacter> enemies = new List<ICharacter>();
-        static Enemy enemy1 = new Enemy((10, 10), 10, 'E', player);
-        static ConfusedEnemy enemy2 = new ConfusedEnemy((5, 10), 10, '?', mapScale, player);
-        static HeavyEnemy enemy3 = new HeavyEnemy((15, 10), 15, 'H', player);
+        static Enemy enemy1 = new Enemy((10, 10), 10, 'E', player, map);
+        static ConfusedEnemy enemy2 = new ConfusedEnemy((5, 10), 10, '?', player, map);
+        static HeavyEnemy enemy3 = new HeavyEnemy((15, 10), 15, 'H', player, map);
 
         static List<IEntity> pickups = new List<IEntity>();
         static Coin coin = new Coin((11, 3), 'o', player);
@@ -52,7 +52,7 @@ namespace GameProgII_FirstPlayable_BenF
                 {
                     if (playerPos == pickup._pos)
                     {
-                        pickup.Use();
+                        pickup.Destroy();
                         player.SetPOS(player._prevPOS);
                     }
                 }
@@ -164,9 +164,12 @@ namespace GameProgII_FirstPlayable_BenF
 
                     isPlayerTurn = false;
                 }
-                
-                foreach(ICharacter enemy in enemies)
+
+                //Thread.Sleep(100);
+
+                foreach (ICharacter enemy in enemies)
                 {
+
                     if (enemy.CheckAlive() == true)
                     {
                         enemy.Update();

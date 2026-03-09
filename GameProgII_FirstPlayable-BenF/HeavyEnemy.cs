@@ -12,7 +12,7 @@ namespace GameProgII_FirstPlayable_BenF
     class HeavyEnemy : Enemy
     {
         
-        public HeavyEnemy((int, int) pos, int health, char model, Player target): base(pos, health, model, target) 
+        public HeavyEnemy((int, int) pos, int health, char model, Player target, Map map): base(pos, health, model, target, map) 
         {
             _attack = 4;
         }
@@ -32,7 +32,12 @@ namespace GameProgII_FirstPlayable_BenF
                 {
                     if (rNum == 1)
                     {
-                        _pos.Item1 -= 1;
+                        _pos.Item1--;
+
+                        if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
+                        {
+                            _pos = _prevPOS;
+                        }
                     }
 
                     else
@@ -45,7 +50,12 @@ namespace GameProgII_FirstPlayable_BenF
                 {
                     if (rNum == 1)
                     {
-                        _pos.Item1 += 1;
+                        _pos.Item1++;
+
+                        if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
+                        {
+                            _pos = _prevPOS;
+                        }
                     }
 
                     else
@@ -66,7 +76,12 @@ namespace GameProgII_FirstPlayable_BenF
                 {
                     if (rNum == 1)
                     {
-                        _pos.Item2 -= 1;
+                        _pos.Item2--;
+
+                        if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
+                        {
+                            _pos = _prevPOS;
+                        }
                     }
 
                     else
@@ -79,7 +94,12 @@ namespace GameProgII_FirstPlayable_BenF
                 {
                     if (rNum == 1)
                     {
-                        _pos.Item2 += 1;
+                        _pos.Item2++;
+
+                        if (_map.isOccupiedMap[_pos.Item1, _pos.Item2] == true)
+                        {
+                            _pos = _prevPOS;
+                        }
                     }
 
                     else

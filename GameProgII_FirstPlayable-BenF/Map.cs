@@ -16,25 +16,25 @@ namespace GameProgII_FirstPlayable_BenF
 
         static public string mapData = File.ReadAllText(path); // dimensions defined by following data:
 
-//        static public char[,] map = new char[,] 
-//{
-//        {'^','^','^','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
-//        {'^','^','`','`','`','`','*','*','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','~','~','~','`','`','`'},
-//        {'^','^','`','`','`','*','*','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','~','~','~','`','`','`','`','`'},
-//        {'^','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
-//        {'`','`','`','`','~','~','~','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
-//        {'`','`','`','`','~','~','~','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
-//        {'`','`','`','~','~','~','~','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','^','^','`','`','`','`','`','`'},
-//        {'`','`','`','`','`','~','~','~','`','`','`','`','`','`','`','`','`','`','`','`','`','^','^','^','^','`','`','`','`','`'},
-//        {'`','`','`','`','`','~','~','~','~','`','`','`','`','`','`','`','`','`','`','`','`','`','`','^','^','^','^','`','`','`'},
-//        {'`','`','`','`','`','`','`','~','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
-//        {'`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
-//        {'`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
-//};
+        //        static public char[,] map = new char[,] 
+        //{
+        //        {'^','^','^','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
+        //        {'^','^','`','`','`','`','*','*','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','~','~','~','`','`','`'},
+        //        {'^','^','`','`','`','*','*','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','~','~','~','`','`','`','`','`'},
+        //        {'^','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
+        //        {'`','`','`','`','~','~','~','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
+        //        {'`','`','`','`','~','~','~','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
+        //        {'`','`','`','~','~','~','~','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','^','^','`','`','`','`','`','`'},
+        //        {'`','`','`','`','`','~','~','~','`','`','`','`','`','`','`','`','`','`','`','`','`','^','^','^','^','`','`','`','`','`'},
+        //        {'`','`','`','`','`','~','~','~','~','`','`','`','`','`','`','`','`','`','`','`','`','`','`','^','^','^','^','`','`','`'},
+        //        {'`','`','`','`','`','`','`','~','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
+        //        {'`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
+        //        {'`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
+        //};
 
         static public int rows = 27;
 
-        static public int cols = 13;
+        static public int cols = 14;
 
         public bool[,] isOccupiedMap = new bool[rows, cols];
 
@@ -47,63 +47,140 @@ namespace GameProgII_FirstPlayable_BenF
         {
             if (File.Exists(path))
             {
-                
-                for (int i = 0; i < rows; i++)
-                {
-                    Debug.WriteLine(" ");
-                    for (int j = 0; j < cols; j++)
-                    {
-                        
+                int lineNum = -1;
+                int charNum = -1;
 
-                        if (mapData[i] == '^')
+                foreach(string line in File.ReadLines(path))
+                {
+                    charNum = -1;
+                    lineNum++;
+
+                    Debug.WriteLine(lineNum + " " + line);
+
+                    foreach (char character in line)
+                    {
+                        charNum++;
+
+                        //Debug.Write(character + " ");
+
+                        if (character == '^')
                         {
-                            isOccupiedMap[i, j] = true;
+                            isOccupiedMap[charNum, lineNum] = true;
                             Debug.Write("True(^) ");
                         }
 
-                        else if (mapData[i] == '`')
+                        else if (character == '`')
                         {
-                            isOccupiedMap[i,j] = false;
+                            isOccupiedMap[charNum, lineNum] = false;
                             Debug.Write("False(') ");
                         }
 
-                        else if (mapData[i] == '~')
+                        else if (character == '~')
                         {
-                            isOccupiedMap[i, j] = true;
+                            isOccupiedMap[charNum, lineNum] = true;
                             Debug.Write("True(~) ");
                         }
 
-                        else if (mapData[i] == '*')
+                        else if (character == '*')
                         {
-                            isOccupiedMap[i, j] = true;
+                            isOccupiedMap[charNum, lineNum] = true;
                             Debug.Write("True(*) ");
                         }
 
-                        else if (mapData[i] == ' ')
+                        else if (character == ' ')
                         {
-                            isOccupiedMap[i, j] = false;
+                            isOccupiedMap[charNum, lineNum] = false;
                             Debug.Write("False() ");
                         }
 
-                        else if (mapData[i] == '|')
+                        else if (character == '|')
                         {
-                            isOccupiedMap[i, j] = true;
+                            isOccupiedMap[charNum, lineNum] = true;
                             Debug.Write("True(|) ");
                         }
 
-                        else if (mapData[i] == '-')
+                        else if (character == '-')
                         {
-                            isOccupiedMap[i, j] = true;
+                            isOccupiedMap[charNum, lineNum] = true;
                             Debug.Write("True(-) ");
+                        }
+
+                        else if (character == '+')
+                        {
+                            isOccupiedMap[charNum, lineNum] = true;
+                            Debug.Write("True(+) ");
                         }
 
                         else
                         {
-                            isOccupiedMap[i, j] = false;
+                            isOccupiedMap[charNum, lineNum] = false;
                             Debug.Write("False(else) ");
                         }
                     }
                 }
+
+                //for (int i = 0; i < rows; i++)
+                //{
+                //    Debug.WriteLine(" ");
+                //    for (int j = 0; j < cols; j++)
+                //    {
+                //        //Debug.Write(mapData[j]);
+
+                //        if (mapData[i] == '^')
+                //        {
+                //            isOccupiedMap[i, j] = true;
+                //            Debug.Write("True(^) ");
+                //        }
+
+                //        else if (mapData[j] == '`')
+                //        {
+                //            isOccupiedMap[i,j] = false;
+                //            Debug.Write("False(') ");
+                //        }
+
+                //        else if (mapData[j] == '~')
+                //        {
+                //            isOccupiedMap[i, j] = true;
+                //            Debug.Write("True(~) ");
+                //        }
+
+                //        else if (mapData[i] == '*')
+                //        {
+                //            isOccupiedMap[i, j] = true;
+                //            Debug.Write("True(*) ");
+                //        }
+
+                //        else if (mapData[j] == ' ')
+                //        {
+                //            isOccupiedMap[i, j] = false;
+                //            Debug.Write("False() ");
+                //        }
+
+                //        else if (mapData[j] == '|')
+                //        {
+                //            isOccupiedMap[i, j] = true;
+                //            Debug.Write("True(|) ");
+                //        }
+
+                //        else if (mapData[j] == '-')
+                //        {
+                //            isOccupiedMap[i, j] = false;
+                //            Debug.Write("True(-) ");
+                //        }
+
+                //        else if (mapData[j] == '+')
+                //        {
+                //            isOccupiedMap[i, j] = true;
+                //            Debug.Write("True(+) ");
+                //        }
+
+                //        else
+                //        {
+                //            isOccupiedMap[i, j] = false;
+                //            Debug.Write("False(else) ");
+                //        }
+                    //}
+                //}
             }
         }
 
