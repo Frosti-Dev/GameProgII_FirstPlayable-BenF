@@ -218,5 +218,15 @@ namespace GameProgII_FirstPlayable_BenF
         {
             return _attack;
         }
+
+        public int CheckHealth()
+        {
+            return _health;
+        }
+
+        public char CheckModel()
+        {
+            return _model;
+        }
     }
 }

@@ -9,6 +9,7 @@ namespace GameProgII_FirstPlayable_BenF
 {
     internal class Player :ICharacter
     {
+        #region Variables and Constructor
         public int _posX;
         public int _posY;
         public (int, int) _prevPOS;
@@ -28,6 +29,7 @@ namespace GameProgII_FirstPlayable_BenF
             _health = health;
             _map = map;
         }
+        #endregion
 
         public void Draw()
         {
@@ -38,7 +40,7 @@ namespace GameProgII_FirstPlayable_BenF
 
         public void Update()
         {
-            if(true) //Console.KeyAvailable
+            if(true) ///(Console.KeyAvailable for thread.sleep)
             {
                 ConsoleKeyInfo keyinfo = Console.ReadKey(true);
 
@@ -48,7 +50,7 @@ namespace GameProgII_FirstPlayable_BenF
 
                         _posY--;
 
-                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
+                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]); //checks if boundary hit
 
                         if (_map.isOccupiedMap[_posX, _posY] == true)
                         {
@@ -60,9 +62,9 @@ namespace GameProgII_FirstPlayable_BenF
 
                         _posX--;
 
-                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
+                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]); //checks if boundary hit
 
-                        
+
                         if (_map.isOccupiedMap[_posX, _posY] == true)
                         {
                             _posX++;
@@ -74,9 +76,9 @@ namespace GameProgII_FirstPlayable_BenF
 
                         _posY++;
 
-                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
+                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]); //checks if boundary hit
 
-                        
+
                         if (_map.isOccupiedMap[_posX, _posY] == true)
                         {
                             _posY--;
@@ -87,7 +89,7 @@ namespace GameProgII_FirstPlayable_BenF
 
                         _posX++;
 
-                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]);
+                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]); //checks if boundary hit
 
                         if (_map.isOccupiedMap[_posX, _posY] == true)
                         {
@@ -103,7 +105,7 @@ namespace GameProgII_FirstPlayable_BenF
                         break;
                 }
 
-                Debug.WriteLine($"Player Pos: {_posX},{_posY}"); ///(pos)
+                //Debug.WriteLine($"Player Pos: {_posX},{_posY}"); ///(pos)
 
             }
             
@@ -124,6 +126,8 @@ namespace GameProgII_FirstPlayable_BenF
         {
             _isAlive = false;
         }
+
+        #region Checks and Sets
 
         public bool CheckAlive()
         {
@@ -162,5 +166,16 @@ namespace GameProgII_FirstPlayable_BenF
             return _attack;
         }
 
+        public int CheckHealth()
+        {
+            return _health;
+        }
+
+        public char CheckModel()
+        {
+            return 'X';
+        }
+
+        #endregion
     }
 }

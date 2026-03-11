@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Coin.cs" />
     <Compile Include="ConfusedEnemy.cs" />
+    <Compile Include="Hazard.cs" />
     <Compile Include="HealthItem.cs" />
     <Compile Include="HeavyEnemy.cs" />
     <Compile Include="Enemy.cs" />

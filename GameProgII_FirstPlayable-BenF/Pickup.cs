@@ -19,7 +19,7 @@ namespace GameProgII_FirstPlayable_BenF
             _model = model;
         }
 
-        public virtual void Draw()
+        virtual public void Draw()
         {
             if (!_isUsed)
             {
@@ -29,13 +29,13 @@ namespace GameProgII_FirstPlayable_BenF
                 Console.Write(_model);
 
                 Console.SetCursorPosition(_pos.Item1, _pos.Item2);
-                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.ForegroundColor = ConsoleColor.White;
 
             }
             
         }
 
-        public virtual void Destroy()
+        virtual public void Destroy()
         {
             _isUsed = true;
             _pos = (0, 0);

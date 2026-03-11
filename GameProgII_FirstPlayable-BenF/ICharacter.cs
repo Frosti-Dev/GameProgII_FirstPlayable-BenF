@@ -11,6 +11,10 @@ namespace GameProgII_FirstPlayable_BenF
     {
         bool CheckAlive();
 
+        char CheckModel();
+
+        int CheckHealth();
+
         int CheckAttack();
 
         (int, int) CheckPOS(bool prev);

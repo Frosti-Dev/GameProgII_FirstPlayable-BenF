@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,44 +12,55 @@ namespace GameProgII_FirstPlayable_BenF
     internal class Program
     {
         #region Variables
-        static int mapScale = 1;
+        static int enemiesDead;
         static bool hasWon;
         static bool isPlayerTurn;
+        static ICharacter lastEnemy;
 
-
-        static Map map = new Map(mapScale);
+        //create entities
+        static Map map = new Map();
         static Player player = new Player(6, 5, map, 10);
 
+        //list of enemies
         static List<ICharacter> enemies = new List<ICharacter>();
         static Enemy enemy1 = new Enemy((10, 10), 10, 'E', player, map);
         static ConfusedEnemy enemy2 = new ConfusedEnemy((5, 10), 10, '?', player, map);
         static HeavyEnemy enemy3 = new HeavyEnemy((15, 10), 15, 'H', player, map);
 
+        //list of pickups
         static List<IEntity> pickups = new List<IEntity>();
         static Coin coin = new Coin((11, 3), 'o', player);
         static Upgrade upgrade = new Upgrade((21, 11), '/', player);
         static HealthItem healthPickup = new HealthItem((21, 3), '+', player);
-       
+
+        //list of hazards
+        static List<IEntity> hazards = new List<IEntity>();
+        static Hazard hazard = new Hazard((4, 8), '#');
+        
 
         #endregion
 
         static public void CheckHits()
         {
-            (int, int) playerPos = (player._posX, player._posY);
+            /*
+             * Checks Entity Collision
+             */
+            (int, int) playerPos = (player._posX, player._posY); //converts player POS into (int,int)
 
             if(isPlayerTurn)
             {
-                foreach (ICharacter enemy in enemies)
+                foreach (ICharacter enemy in enemies) //checks if player hit any enemies
                 {
                     if (playerPos == enemy.CheckPOS(false))
                     {
                         enemy.TakeDamage(player._attack);
+                        lastEnemy = enemy;
                         player._posX = player._prevPOS.Item1;
                         player._posY = player._prevPOS.Item2;
                     }
                 }
                 
-                foreach (Pickup pickup in pickups)
+                foreach (Pickup pickup in pickups) //checks if player hit any pickups
                 {
                     if (playerPos == pickup._pos)
                     {
@@ -60,9 +72,9 @@ namespace GameProgII_FirstPlayable_BenF
                 
             }
 
-            else
+            else //enemy turn
             {
-                foreach(ICharacter enemy in enemies)
+                foreach(ICharacter enemy in enemies) //checks if enemy hit player
                 {
                     if (playerPos == enemy.CheckPOS(false))
                     {
@@ -70,6 +82,21 @@ namespace GameProgII_FirstPlayable_BenF
                         enemy.SetPOS(enemy.CheckPOS(true));
                     }
                 }
+
+                foreach (ICharacter enemy in enemies) //check if enemy hit enemy
+                {
+                    foreach (ICharacter otherEnemy in enemies)
+                    {
+                        if (enemy != otherEnemy)
+                        {
+                            if(enemy.CheckPOS(false) == otherEnemy.CheckPOS(false))
+                            {
+                                enemy.SetPOS(enemy.CheckPOS(true));
+                            }
+                        }
+                    }
+                }
+
             }
         }
 
@@ -77,7 +104,7 @@ namespace GameProgII_FirstPlayable_BenF
         {
             Console.CursorVisible = false;
 
-            map.MakeOccupiedMap();
+            map.MakeOccupiedMap(); //make boundary map
 
             //add to lists
             pickups.Add(coin);
@@ -88,6 +115,10 @@ namespace GameProgII_FirstPlayable_BenF
             enemies.Add(enemy2);
             enemies.Add(enemy3);
 
+            /*
+             * GAMEPLAY LOOP
+             */
+
             while (player._isAlive)
             {
                 player._prevPOS = (player._posX, player._posY);
@@ -96,15 +127,18 @@ namespace GameProgII_FirstPlayable_BenF
                 Console.Clear();
                 map.DisplayMap();
 
+
+                //display HUD
                 Console.WriteLine($"Player Health: {player._health}");
                 Console.WriteLine($"Player Attack: {player._attack}");
                 Console.WriteLine($"Coins: {player._coins}");
-                Console.WriteLine($"{enemy1._model} Health: {enemy1._health}");
-                Console.WriteLine($"{enemy2._model} Health: {enemy2._health}");
-                Console.WriteLine($"{enemy3._model} Health: {enemy3._health}");
+                if(lastEnemy != null)
+                {
+                    Console.WriteLine($"Last Enemy: {lastEnemy.CheckModel()} Health: {lastEnemy.CheckHealth()} Strength: {lastEnemy.CheckAttack()}");
+                }
 
 
-
+                //display pickups
                 foreach (Pickup pickup in pickups)
                 {
                     if (!pickup._isUsed)
@@ -113,6 +147,7 @@ namespace GameProgII_FirstPlayable_BenF
                     }
                 }
                 
+                //display enemies
                 foreach(ICharacter enemy in enemies)
                 {
                     if (enemy.CheckAlive() == true)
@@ -121,9 +156,9 @@ namespace GameProgII_FirstPlayable_BenF
                     }
                 }
 
-                
-
+                //display player
                 player.Draw();
+
                 CheckHits();
           
 
@@ -134,14 +169,16 @@ namespace GameProgII_FirstPlayable_BenF
                         Console.Clear();
                         map.DisplayMap();
 
-
+                        //display hud
                         Console.WriteLine($"Player Health: {player._health}");
                         Console.WriteLine($"Player Attack: {player._attack}");
                         Console.WriteLine($"Coins: {player._coins}");
-                        Console.WriteLine($"{enemy1._model} Health: {enemy1._health}");
-                        Console.WriteLine($"{enemy2._model} Health: {enemy2._health}");
-                        Console.WriteLine($"{enemy3._model} Health: {enemy3._health}");
+                        if (lastEnemy != null)
+                        {
+                            Console.WriteLine($"Last Enemy: {lastEnemy.CheckModel()} Health: {lastEnemy.CheckHealth()} Strength: {lastEnemy.CheckAttack()}");
+                        }
 
+                        //display pickups
                         foreach (Pickup pickup in pickups)
                         {
                             if (!pickup._isUsed)
@@ -150,6 +187,7 @@ namespace GameProgII_FirstPlayable_BenF
                             }
                         }
 
+                        //display enemies
                         foreach (ICharacter enemy in enemies)
                         {
                             if (enemy.CheckAlive() == true)
@@ -158,15 +196,15 @@ namespace GameProgII_FirstPlayable_BenF
                             }
                         }
 
-                        
+                        //display player
                         player.Draw();
+
                         CheckHits();
 
                     isPlayerTurn = false;
                 }
 
-                //Thread.Sleep(100);
-
+                //move enemies (if still alive)
                 foreach (ICharacter enemy in enemies)
                 {
 
@@ -178,9 +216,13 @@ namespace GameProgII_FirstPlayable_BenF
 
                 CheckHits();
 
+                /*
+                 * WIN CONDITION CHECK
+                 */
+
                 foreach(ICharacter enemy in enemies)
                 {
-                    int enemiesDead = 0;
+                    
                     if (enemy.CheckAlive() == false)
                     {
                         enemiesDead++;
@@ -199,6 +241,8 @@ namespace GameProgII_FirstPlayable_BenF
                     }
                 }
 
+                enemiesDead = 0;
+
                 if (hasWon)
                 {
                     break;
@@ -211,10 +255,9 @@ namespace GameProgII_FirstPlayable_BenF
                     break;
                 }
 
-                //Thread.Sleep(200);
             }
 
-            #region Win Conditions
+            #region Win Screens
             if (hasWon)
             {
                 Console.Clear();
