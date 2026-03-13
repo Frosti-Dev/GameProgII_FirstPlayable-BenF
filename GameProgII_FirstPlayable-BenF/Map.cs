@@ -100,69 +100,6 @@ namespace GameProgII_FirstPlayable_BenF
                         }
                     }
                 }
-
-                //for (int i = 0; i < rows; i++)
-                //{
-                //    Debug.WriteLine(" ");
-                //    for (int j = 0; j < cols; j++)
-                //    {
-                //        //Debug.Write(mapData[j]);
-
-                //        if (mapData[i] == '^')
-                //        {
-                //            isOccupiedMap[i, j] = true;
-                //            Debug.Write("True(^) ");
-                //        }
-
-                //        else if (mapData[j] == '`')
-                //        {
-                //            isOccupiedMap[i,j] = false;
-                //            Debug.Write("False(') ");
-                //        }
-
-                //        else if (mapData[j] == '~')
-                //        {
-                //            isOccupiedMap[i, j] = true;
-                //            Debug.Write("True(~) ");
-                //        }
-
-                //        else if (mapData[i] == '*')
-                //        {
-                //            isOccupiedMap[i, j] = true;
-                //            Debug.Write("True(*) ");
-                //        }
-
-                //        else if (mapData[j] == ' ')
-                //        {
-                //            isOccupiedMap[i, j] = false;
-                //            Debug.Write("False() ");
-                //        }
-
-                //        else if (mapData[j] == '|')
-                //        {
-                //            isOccupiedMap[i, j] = true;
-                //            Debug.Write("True(|) ");
-                //        }
-
-                //        else if (mapData[j] == '-')
-                //        {
-                //            isOccupiedMap[i, j] = false;
-                //            Debug.Write("True(-) ");
-                //        }
-
-                //        else if (mapData[j] == '+')
-                //        {
-                //            isOccupiedMap[i, j] = true;
-                //            Debug.Write("True(+) ");
-                //        }
-
-                //        else
-                //        {
-                //            isOccupiedMap[i, j] = false;
-                //            Debug.Write("False(else) ");
-                //        }
-                    //}
-                //}
             }
         }
 

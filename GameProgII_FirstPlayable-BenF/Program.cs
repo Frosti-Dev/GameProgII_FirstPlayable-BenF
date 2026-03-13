@@ -33,10 +33,14 @@ namespace GameProgII_FirstPlayable_BenF
         static Upgrade upgrade = new Upgrade((21, 11), '/', player);
         static HealthItem healthPickup = new HealthItem((21, 3), '+', player);
 
+
         //list of hazards
         static List<IEntity> hazards = new List<IEntity>();
-        static Hazard hazard = new Hazard((4, 8), '#');
-        
+        static Hazard hazard1 = new Hazard((4, 8), '#');
+        static Hazard hazard2 = new Hazard((5, 8), '#');
+        static Hazard hazard3 = new Hazard((4, 9), '#');
+        static Hazard hazard4 = new Hazard((5, 9), '#');
+
 
         #endregion
 
@@ -67,6 +71,15 @@ namespace GameProgII_FirstPlayable_BenF
                         pickup.Destroy();
                         player.SetPOS(player._prevPOS);
                     }
+                }
+
+                foreach (Hazard hazard in hazards)
+                {
+                    if (playerPos == hazard._pos)
+                    {
+                        hazard.Effect(player);
+                    }
+
                 }
                 
                 
@@ -104,12 +117,21 @@ namespace GameProgII_FirstPlayable_BenF
         {
             Console.CursorVisible = false;
 
+            //int scale = 5;
+            //Console.SetWindowSize(Console.WindowWidth * scale, Console.WindowHeight * scale);
+
             map.MakeOccupiedMap(); //make boundary map
 
             //add to lists
             pickups.Add(coin);
             pickups.Add(healthPickup);
             pickups.Add(upgrade);
+
+            hazards.Add(hazard1);
+            hazards.Add(hazard2);
+            hazards.Add(hazard3);
+            hazards.Add(hazard4);
+
 
             enemies.Add(enemy1);
             enemies.Add(enemy2);
@@ -145,6 +167,11 @@ namespace GameProgII_FirstPlayable_BenF
                     {
                         pickup.Draw();
                     }
+                }
+
+                foreach (Hazard hazard in hazards)
+                {
+                    hazard.Draw();
                 }
                 
                 //display enemies
@@ -187,8 +214,13 @@ namespace GameProgII_FirstPlayable_BenF
                             }
                         }
 
-                        //display enemies
-                        foreach (ICharacter enemy in enemies)
+                    foreach (Hazard hazard in hazards)
+                    {
+                        hazard.Draw();
+                    }
+
+                    //display enemies
+                    foreach (ICharacter enemy in enemies)
                         {
                             if (enemy.CheckAlive() == true)
                             {
