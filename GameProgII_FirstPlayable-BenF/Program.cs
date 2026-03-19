@@ -140,6 +140,7 @@ namespace GameProgII_FirstPlayable_BenF
             /*
              * GAMEPLAY LOOP
              */
+            
 
             while (player._isAlive)
             {
@@ -194,7 +195,7 @@ namespace GameProgII_FirstPlayable_BenF
                     
                         player.Update();
                         Console.Clear();
-                        map.DisplayMap();
+                        //map.DisplayMap();
 
                         //display hud
                         Console.WriteLine($"Player Health: {player._health}");

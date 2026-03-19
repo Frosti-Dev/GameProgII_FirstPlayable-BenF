@@ -15,8 +15,8 @@ namespace GameProgII_FirstPlayable_BenF
         static public string mapData = File.ReadAllText(path); 
 
         //scale of map
-        static public int rows = 27;
-        static public int cols = 14;
+        static public int rows = 89;
+        static public int cols = 36;
 
         public bool[,] isOccupiedMap = new bool[rows, cols];
 
