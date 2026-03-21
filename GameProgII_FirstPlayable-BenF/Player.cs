@@ -103,9 +103,13 @@ namespace GameProgII_FirstPlayable_BenF
                         Console.WriteLine("You Quit.");
                         Environment.Exit(0);
                         break;
+
+                    case ConsoleKey.Spacebar:
+                        Debug.Write("/");
+                        break;
                 }
 
-                //Debug.WriteLine($"Player Pos: {_posX},{_posY}"); ///(pos)
+                Debug.WriteLine($"Player Pos: {_posX},{_posY}"); ///(pos)
 
             }
             

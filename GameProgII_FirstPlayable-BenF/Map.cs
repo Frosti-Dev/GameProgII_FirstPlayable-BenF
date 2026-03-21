@@ -105,7 +105,7 @@ namespace GameProgII_FirstPlayable_BenF
 
         public void DisplayMap()
         {
-            Debug.WriteLine(mapData.Length);
+            //Debug.WriteLine(mapData.Length);
 
             if (File.Exists(path))
             {
