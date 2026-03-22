@@ -16,7 +16,7 @@ namespace GameProgII_FirstPlayable_BenF
 
         override public void Destroy()
         {
-            _player._attack = 3;
+            _player._attack += 2;
 
             _isUsed = true;
             _pos = (0, 0);

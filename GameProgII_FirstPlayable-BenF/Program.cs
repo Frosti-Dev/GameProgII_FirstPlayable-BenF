@@ -53,9 +53,29 @@ namespace GameProgII_FirstPlayable_BenF
 
         //list of pickups
         static List<IEntity> pickups = new List<IEntity>();
-        static Coin coin = new Coin((11, 3), 'o', player);
-        static Upgrade upgrade = new Upgrade((21, 11), '/', player);
-        static HealthItem healthPickup = new HealthItem((21, 3), '+', player);
+        static Coin coin1 = new Coin((11, 3), 'o', player);
+        static Coin coin2 = new Coin((24, 1), 'o', player);
+        static Coin coin3 = new Coin((62, 10), 'o', player);
+        static Coin coin4 = new Coin((81, 4), 'o', player);
+        static Coin coin5 = new Coin((82, 29), 'o', player);
+        static Coin coin6 = new Coin((74, 33), 'o', player);
+        static Coin coin7 = new Coin((62, 24), 'o', player);
+        static Coin coin8 = new Coin((14, 29), 'o', player);
+        static Coin coin9 = new Coin((14, 34), 'o', player);
+        static Coin coin10 = new Coin((4, 34), 'o', player);
+
+        static Upgrade upgrade1 = new Upgrade((21, 11), '/', player);
+        static Upgrade upgrade2 = new Upgrade((63, 3), '/', player);
+        static Upgrade upgrade3 = new Upgrade((72, 17), '/', player);
+        static Upgrade upgrade4 = new Upgrade((39, 6), '/', player);
+        static Upgrade upgrade5 = new Upgrade((41, 28), '/', player);
+
+        static HealthItem healthPickup1 = new HealthItem((21, 3), '+', player);
+        static HealthItem healthPickup2 = new HealthItem((76, 2), '+', player);
+        static HealthItem healthPickup3 = new HealthItem((78, 24), '+', player);
+        static HealthItem healthPickup4 = new HealthItem((81, 10), '+', player);
+        static HealthItem healthPickup5 = new HealthItem((63, 32), '+', player);
+
 
 
         //list of hazards
@@ -146,10 +166,29 @@ namespace GameProgII_FirstPlayable_BenF
 
             map.MakeOccupiedMap(); //make boundary map
 
-            //add to lists
-            pickups.Add(coin);
-            pickups.Add(healthPickup);
-            pickups.Add(upgrade);
+#region add to lists
+            pickups.Add(coin1);
+            pickups.Add(coin2);
+            pickups.Add(coin3);
+            pickups.Add(coin4);
+            pickups.Add(coin5);
+            pickups.Add(coin6);
+            pickups.Add(coin7);
+            pickups.Add(coin8);
+            pickups.Add(coin9);
+            pickups.Add(coin10);
+
+            pickups.Add(healthPickup1);
+            pickups.Add(healthPickup2);
+            pickups.Add(healthPickup3);
+            pickups.Add(healthPickup4);
+            pickups.Add(healthPickup5);
+
+            pickups.Add(upgrade1);
+            pickups.Add(upgrade2);
+            pickups.Add(upgrade3);
+            pickups.Add(upgrade4);
+            pickups.Add(upgrade5);
 
             hazards.Add(hazard1);
             hazards.Add(hazard2);
@@ -182,6 +221,8 @@ namespace GameProgII_FirstPlayable_BenF
             enemies.Add(enemy23);
             enemies.Add(enemy24);
             enemies.Add(enemy25);
+
+            #endregion
 
             Console.WriteLine("Please enter full screen and then press any key to play!");
             Console.ReadKey(true);
