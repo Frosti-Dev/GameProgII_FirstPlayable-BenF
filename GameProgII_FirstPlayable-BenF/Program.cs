@@ -14,6 +14,7 @@ namespace GameProgII_FirstPlayable_BenF
         #region Variables
         static int enemiesDead;
         static bool hasWon;
+        static string area;
         static bool isPlayerTurn;
         static ICharacter lastEnemy;
 
@@ -84,7 +85,39 @@ namespace GameProgII_FirstPlayable_BenF
         static Hazard hazard2 = new Hazard((5, 8), '#');
         static Hazard hazard3 = new Hazard((4, 9), '#');
         static Hazard hazard4 = new Hazard((5, 9), '#');
-
+        static Hazard hazard5 = new Hazard((70, 27), '#');
+        static Hazard hazard6 = new Hazard((71, 27), '#');
+        static Hazard hazard7 = new Hazard((72, 27), '#');
+        static Hazard hazard8 = new Hazard((73, 27), '#');
+        static Hazard hazard9 = new Hazard((74, 27), '#');
+        static Hazard hazard10 = new Hazard((74, 28), '#');
+        static Hazard hazard11 = new Hazard((71, 28), '#');
+        static Hazard hazard12 = new Hazard((70, 28), '#');
+        static Hazard hazard13 = new Hazard((69, 28), '#');
+        static Hazard hazard14 = new Hazard((69, 29), '#');
+        static Hazard hazard15 = new Hazard((68, 29), '#');
+        static Hazard hazard16 = new Hazard((71, 29), '#');
+        static Hazard hazard17 = new Hazard((73, 29), '#');
+        static Hazard hazard18 = new Hazard((74, 29), '#');
+        static Hazard hazard19 = new Hazard((75, 29), '#');
+        static Hazard hazard20 = new Hazard((72, 29), '#');
+        static Hazard hazard21 = new Hazard((73, 28), '#');
+        static Hazard hazard22 = new Hazard((72, 28), '#');
+        static Hazard hazard23 = new Hazard((75, 28), '#');
+        static Hazard hazard24 = new Hazard((76, 29), '#');
+        static Hazard hazard25 = new Hazard((70, 29), '#');
+        static Hazard hazard26 = new Hazard((75, 30), '#');
+        static Hazard hazard27 = new Hazard((74, 30), '#');
+        static Hazard hazard28 = new Hazard((73, 30), '#');
+        static Hazard hazard29 = new Hazard((72, 30), '#');
+        static Hazard hazard30 = new Hazard((71, 30), '#');
+        static Hazard hazard31 = new Hazard((70, 30), '#');
+        static Hazard hazard32 = new Hazard((69, 30), '#');
+        static Hazard hazard33 = new Hazard((70, 31), '#');
+        static Hazard hazard34 = new Hazard((71, 31), '#');
+        static Hazard hazard35 = new Hazard((72, 31), '#');
+        static Hazard hazard36 = new Hazard((73, 31), '#');
+        static Hazard hazard37 = new Hazard((74, 31), '#');
 
         #endregion
 
@@ -103,8 +136,7 @@ namespace GameProgII_FirstPlayable_BenF
                     {
                         enemy.TakeDamage(player._attack);
                         lastEnemy = enemy;
-                        player._posX = player._prevPOS.Item1;
-                        player._posY = player._prevPOS.Item2;
+                        player.SetPOS(player._prevPOS);
                     }
                 }
                 
@@ -155,6 +187,19 @@ namespace GameProgII_FirstPlayable_BenF
                 }
 
             }
+
+            Console.SetCursorPosition(0, 38);
+            //update HUD
+            if(player._health < 10)
+            {
+                Console.WriteLine($"Player Health: 0{player._health}");
+            }
+            else
+            {
+                Console.WriteLine($"Player Health: {player._health}");
+            }
+            Console.WriteLine($"Player Attack: 0{player._attack}");
+            Console.WriteLine($"Coins: {player._coins}");
         }
 
         static void Main(string[] args)
@@ -165,6 +210,7 @@ namespace GameProgII_FirstPlayable_BenF
             //Console.SetWindowSize(Console.WindowWidth * scale, Console.WindowHeight * scale);
 
             map.MakeOccupiedMap(); //make boundary map
+            map.MakeReferenceMap(); //make reference map
 
 #region add to lists
             pickups.Add(coin1);
@@ -194,56 +240,92 @@ namespace GameProgII_FirstPlayable_BenF
             hazards.Add(hazard2);
             hazards.Add(hazard3);
             hazards.Add(hazard4);
+            hazards.Add(hazard5);
+            hazards.Add(hazard6);
+            hazards.Add(hazard7);
+            hazards.Add(hazard8);
+            hazards.Add(hazard9);
+            hazards.Add(hazard10);
+            hazards.Add(hazard11);
+            hazards.Add(hazard12);
+            hazards.Add(hazard13);
+            hazards.Add(hazard14);
+            hazards.Add(hazard15);
+            hazards.Add(hazard16);
+            hazards.Add(hazard17);
+            hazards.Add(hazard18);
+            hazards.Add(hazard19);
+            hazards.Add(hazard20);
+            hazards.Add(hazard21);
+            hazards.Add(hazard22);
+            hazards.Add(hazard23);
+            hazards.Add(hazard24);
+            hazards.Add(hazard25);
+            hazards.Add(hazard26);
+            hazards.Add(hazard27);
+            hazards.Add(hazard28);
+            hazards.Add(hazard29);
+            hazards.Add(hazard30);
+            hazards.Add(hazard31);
+            hazards.Add(hazard32);
+            hazards.Add(hazard33);
+            hazards.Add(hazard34);
+            hazards.Add(hazard35);
+            hazards.Add(hazard36);
+            hazards.Add(hazard37);
 
 
             enemies.Add(enemy1);
-            enemies.Add(enemy2);
-            enemies.Add(enemy3);
-            enemies.Add(enemy4);
-            enemies.Add(enemy5);
-            enemies.Add(enemy6);
-            enemies.Add(enemy7);
-            enemies.Add(enemy8);
-            enemies.Add(enemy9);
-            enemies.Add(enemy10);
-            enemies.Add(enemy11);
-            enemies.Add(enemy12);
-            enemies.Add(enemy13);
-            enemies.Add(enemy14);
-            enemies.Add(enemy15);
-            enemies.Add(enemy16);
-            enemies.Add(enemy17);
-            enemies.Add(enemy18);
-            enemies.Add(enemy19);
-            enemies.Add(enemy20);
-            enemies.Add(enemy21);
-            enemies.Add(enemy22);
-            enemies.Add(enemy23);
-            enemies.Add(enemy24);
-            enemies.Add(enemy25);
+            //enemies.Add(enemy2);
+            //enemies.Add(enemy3);
+            //enemies.Add(enemy4);
+            //enemies.Add(enemy5);
+            //enemies.Add(enemy6);
+            //enemies.Add(enemy7);
+            //enemies.Add(enemy8);
+            //enemies.Add(enemy9);
+            //enemies.Add(enemy10);
+            //enemies.Add(enemy11);
+            //enemies.Add(enemy12);
+            //enemies.Add(enemy13);
+            //enemies.Add(enemy14);
+            //enemies.Add(enemy15);
+            //enemies.Add(enemy16);
+            //enemies.Add(enemy17);
+            //enemies.Add(enemy18);
+            //enemies.Add(enemy19);
+            //enemies.Add(enemy20);
+            //enemies.Add(enemy21);
+            //enemies.Add(enemy22);
+            //enemies.Add(enemy23);
+            //enemies.Add(enemy24);
+            //enemies.Add(enemy25);
 
             #endregion
 
             Console.WriteLine("Please enter full screen and then press any key to play!");
             Console.ReadKey(true);
 
+            Console.Clear();
+
+            map.DisplayMap();
+
+            //display HUD
+            Console.WriteLine($"Player Health: {player._health}");
+            Console.WriteLine($"Player Attack: {player._attack}");
+            Console.WriteLine($"Coins: {player._coins}!");
+
             /*
              * GAMEPLAY LOOP
              */
+
 
             while (player._isAlive)
             {
                 player._prevPOS = (player._posX, player._posY);
 
                 isPlayerTurn = true;
-                Console.Clear();
-                map.DisplayMap();
 
-
-                //display HUD
-                Console.WriteLine($"Player Health: {player._health}");
-                Console.WriteLine($"Player Attack: {player._attack}");
-                Console.WriteLine($"Coins: {player._coins}");
                 if(lastEnemy != null)
                 {
                     Console.WriteLine($"Last Enemy: {lastEnemy.CheckModel()} Health: {lastEnemy.CheckHealth()} Strength: {lastEnemy.CheckAttack()}");
@@ -283,13 +365,8 @@ namespace GameProgII_FirstPlayable_BenF
                 {
                     
                         player.Update();
-                        Console.Clear();
                         //map.DisplayMap();
 
-                        //display hud
-                        Console.WriteLine($"Player Health: {player._health}");
-                        Console.WriteLine($"Player Attack: {player._attack}");
-                        Console.WriteLine($"Coins: {player._coins}");
                         if (lastEnemy != null)
                         {
                             Console.WriteLine($"Last Enemy: {lastEnemy.CheckModel()} Health: {lastEnemy.CheckHealth()} Strength: {lastEnemy.CheckAttack()}");
@@ -337,6 +414,8 @@ namespace GameProgII_FirstPlayable_BenF
                 }
 
                 CheckHits();
+
+                //Thread.Sleep(100);
 
                 /*
                  * WIN CONDITION CHECK

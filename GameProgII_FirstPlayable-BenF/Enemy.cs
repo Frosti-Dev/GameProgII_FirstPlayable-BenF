@@ -39,6 +39,9 @@ namespace GameProgII_FirstPlayable_BenF
         public void Draw()
         {
             Console.ForegroundColor = ConsoleColor.Red;
+            Console.SetCursorPosition(_prevPOS.Item1, _prevPOS.Item2);
+            Console.Write(_map.refMap[_prevPOS.Item1, _prevPOS.Item2]);
+
             Console.SetCursorPosition(_pos.Item1, _pos.Item2);
 
             Console.Write(_model);

@@ -20,6 +20,8 @@ namespace GameProgII_FirstPlayable_BenF
 
         public bool[,] isOccupiedMap = new bool[rows, cols];
 
+        public char[,] refMap = new char[rows, cols];
+
         public Map()
         {
             
@@ -37,7 +39,7 @@ namespace GameProgII_FirstPlayable_BenF
                     charNum = -1;
                     lineNum++;
 
-                    Debug.WriteLine(lineNum + " " + line);
+                    //Debug.WriteLine(lineNum + " " + line);
 
                     foreach (char character in line)
                     {
@@ -48,60 +50,140 @@ namespace GameProgII_FirstPlayable_BenF
                         if (character == '^')
                         {
                             isOccupiedMap[charNum, lineNum] = true;
-                            Debug.Write("True(^) ");
+                            //Debug.Write("True(^) ");
                         }
 
                         else if (character == '`')
                         {
                             isOccupiedMap[charNum, lineNum] = false;
-                            Debug.Write("False(') ");
+                            //Debug.Write("False(') ");
                         }
 
                         else if (character == '~')
                         {
                             isOccupiedMap[charNum, lineNum] = true;
-                            Debug.Write("True(~) ");
+                            //Debug.Write("True(~) ");
                         }
 
                         else if (character == '*')
                         {
                             isOccupiedMap[charNum, lineNum] = true;
-                            Debug.Write("True(*) ");
+                            //Debug.Write("True(*) ");
                         }
 
                         else if (character == ' ')
                         {
                             isOccupiedMap[charNum, lineNum] = false;
-                            Debug.Write("False() ");
+                            //Debug.Write("False() ");
                         }
 
                         else if (character == '|')
                         {
                             isOccupiedMap[charNum, lineNum] = true;
-                            Debug.Write("True(|) ");
+                            //Debug.Write("True(|) ");
                         }
 
                         else if (character == '-')
                         {
                             isOccupiedMap[charNum, lineNum] = true;
-                            Debug.Write("True(-) ");
+                            //Debug.Write("True(-) ");
                         }
 
                         else if (character == '+')
                         {
                             isOccupiedMap[charNum, lineNum] = true;
-                            Debug.Write("True(+) ");
+                            //Debug.Write("True(+) ");
                         }
 
                         else
                         {
                             isOccupiedMap[charNum, lineNum] = false;
-                            Debug.Write("False(else) ");
+                            //Debug.Write("False(else) ");
                         }
                     }
                 }
             }
         }
+
+
+        public void MakeReferenceMap()
+        {
+            if (File.Exists(path))
+            {
+                int lineNum = -1;
+                int charNum = -1;
+
+                foreach (string line in File.ReadLines(path))
+                {
+                    charNum = -1;
+                    lineNum++;
+
+                  
+
+                    foreach (char character in line)
+                    {
+                        charNum++;
+
+                        //Debug.Write(character + " ");
+
+                        if (character == '^')
+                        {
+                            refMap[charNum, lineNum] = character;
+                          
+                        }
+
+                        else if (character == '`')
+                        {
+                            refMap[charNum, lineNum] = character;
+
+                        }
+
+                        else if (character == '~')
+                        {
+                            refMap[charNum, lineNum] = character;
+
+                        }
+
+                        else if (character == '*')
+                        {
+                            refMap[charNum, lineNum] = character;
+
+                        }
+
+                        else if (character == ' ')
+                        {
+                            refMap[charNum, lineNum] = character;
+
+                        }
+
+                        else if (character == '|')
+                        {
+                            refMap[charNum, lineNum] = character;
+
+                        }
+
+                        else if (character == '-')
+                        {
+                            refMap[charNum, lineNum] = character;
+
+                        }
+
+                        else if (character == '+')
+                        {
+                            refMap[charNum, lineNum] = character;
+
+                        }
+
+                        else
+                        {
+                            refMap[charNum, lineNum] = character;
+
+                        }
+                    }
+                }
+            }
+        }
+
 
         public void DisplayMap()
         {

@@ -18,7 +18,7 @@ namespace GameProgII_FirstPlayable_BenF
 
             _model = model;
         }
-
+         
         virtual public void Draw()
         {
             if (!_isUsed)

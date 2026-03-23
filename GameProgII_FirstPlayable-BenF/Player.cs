@@ -33,6 +33,9 @@ namespace GameProgII_FirstPlayable_BenF
 
         public void Draw()
         {
+            Console.SetCursorPosition(_prevPOS.Item1,_prevPOS.Item2);
+            Console.Write(_map.refMap[_prevPOS.Item1,_prevPOS.Item2]);
+
             Console.SetCursorPosition(_posX, _posY);
             Console.Write('X');
             Console.SetCursorPosition(_posX, _posY);
@@ -161,6 +164,8 @@ namespace GameProgII_FirstPlayable_BenF
 
         public void SetPOS((int,int) pos)
         {
+            Console.Write(_map.refMap[_prevPOS.Item1, _prevPOS.Item2]);
+
             _posX = pos.Item1;
             _posY = pos.Item2;
         }
