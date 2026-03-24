@@ -24,13 +24,14 @@ namespace GameProgII_FirstPlayable_BenF
 
         //list of enemies
         static List<ICharacter> enemies = new List<ICharacter>();
+        //area1;
+        static List<ICharacter> area1Enemies = new List<ICharacter>();
         static Enemy enemy1 = new Enemy((10, 10), 10, 'E', player, map);
         static ConfusedEnemy enemy2 = new ConfusedEnemy((5, 10), 10, '?', player, map);
         static HeavyEnemy enemy3 = new HeavyEnemy((15, 10), 15, 'H', player, map);
-        static HeavyEnemy enemy4 = new HeavyEnemy((64, 24), 15, 'H', player, map);
-        static HeavyEnemy enemy5 = new HeavyEnemy((78, 24), 15, 'H', player, map);
-        static HeavyEnemy enemy6 = new HeavyEnemy((63, 28), 15, 'H', player, map);
-        static HeavyEnemy enemy7 = new HeavyEnemy((68, 31), 15, 'H', player, map);
+
+        //area2
+        static List<ICharacter> area2Enemies = new List<ICharacter>();
         static Enemy enemy8 = new Enemy((62, 3), 10, 'E', player, map);
         static Enemy enemy9 = new Enemy((70, 2), 10, 'E', player, map);
         static Enemy enemy10 = new Enemy((79, 3), 10, 'E', player, map);
@@ -38,8 +39,9 @@ namespace GameProgII_FirstPlayable_BenF
         static Enemy enemy12 = new Enemy((79, 11), 10, 'E', player, map);
         static Enemy enemy13 = new Enemy((70, 11), 10, 'E', player, map);
         static Enemy enemy14 = new Enemy((63, 11), 10, 'E', player, map);
-        static Enemy enemy15 = new Enemy((78, 28), 10, 'E', player, map);
-        static Enemy enemy16 = new Enemy((63, 31), 10, 'E', player, map);
+
+        //area 3
+        static List<ICharacter> area3Enemies = new List<ICharacter>();
         static Enemy enemy17 = new Enemy((7, 27), 10, 'E', player, map);
         static Enemy enemy18 = new Enemy((7, 30), 10, 'E', player, map);
         static Enemy enemy19 = new Enemy((9, 33), 10, 'E', player, map);
@@ -49,7 +51,16 @@ namespace GameProgII_FirstPlayable_BenF
         static Enemy enemy23 = new Enemy((19, 30), 10, 'E', player, map);
         static Enemy enemy24 = new Enemy((19, 31), 10, 'E', player, map);
         static Enemy enemy25 = new Enemy((19, 24), 10, 'E', player, map);
-        
+
+        //area4
+        static List<ICharacter> area4Enemies = new List<ICharacter>();
+        static HeavyEnemy enemy4 = new HeavyEnemy((64, 24), 15, 'H', player, map);
+        static HeavyEnemy enemy5 = new HeavyEnemy((78, 24), 15, 'H', player, map);
+        static HeavyEnemy enemy6 = new HeavyEnemy((63, 28), 15, 'H', player, map);
+        static HeavyEnemy enemy7 = new HeavyEnemy((68, 31), 15, 'H', player, map);
+        static Enemy enemy15 = new Enemy((78, 28), 10, 'E', player, map);
+        static Enemy enemy16 = new Enemy((63, 31), 10, 'E', player, map);
+
 
 
         //list of pickups
@@ -200,7 +211,45 @@ namespace GameProgII_FirstPlayable_BenF
             }
             Console.WriteLine($"Player Attack: 0{player._attack}");
             Console.WriteLine($"Coins: {player._coins}");
+            Console.WriteLine($"Area: {area}");
+
         }
+
+        static public void CheckArea()
+        {
+            if (player._posY < 13)
+            {
+                if (player._posX > 26)
+                {
+                    if (player._posX < 57) area = "Hallway";
+
+                    else if (player._posX > 57) area = "Area  2";
+
+                }
+
+                else if (player._posX < 26) area = "Area  1";
+            }
+
+            else if (player._posY > 22)
+            {
+                if (player._posX > 26)
+                {
+                    if (player._posX < 57) area = "Hallway";
+
+                    else if (player._posX > 57) area = "Area  4";
+
+                }
+
+                else if (player._posX < 26) area = "Area  3";
+            }
+
+            else
+            {
+                area = "Hallway";
+            }
+
+        }
+            
 
         static void Main(string[] args)
         {
@@ -276,30 +325,62 @@ namespace GameProgII_FirstPlayable_BenF
 
 
             enemies.Add(enemy1);
-            //enemies.Add(enemy2);
-            //enemies.Add(enemy3);
-            //enemies.Add(enemy4);
-            //enemies.Add(enemy5);
-            //enemies.Add(enemy6);
-            //enemies.Add(enemy7);
-            //enemies.Add(enemy8);
-            //enemies.Add(enemy9);
-            //enemies.Add(enemy10);
-            //enemies.Add(enemy11);
-            //enemies.Add(enemy12);
-            //enemies.Add(enemy13);
-            //enemies.Add(enemy14);
-            //enemies.Add(enemy15);
-            //enemies.Add(enemy16);
-            //enemies.Add(enemy17);
-            //enemies.Add(enemy18);
-            //enemies.Add(enemy19);
-            //enemies.Add(enemy20);
-            //enemies.Add(enemy21);
-            //enemies.Add(enemy22);
-            //enemies.Add(enemy23);
-            //enemies.Add(enemy24);
-            //enemies.Add(enemy25);
+            enemies.Add(enemy2);
+            enemies.Add(enemy3);
+            enemies.Add(enemy4);
+            enemies.Add(enemy5);
+            enemies.Add(enemy6);
+            enemies.Add(enemy7);
+            enemies.Add(enemy8);
+            enemies.Add(enemy9);
+            enemies.Add(enemy10);
+            enemies.Add(enemy11);
+            enemies.Add(enemy12);
+            enemies.Add(enemy13);
+            enemies.Add(enemy14);
+            enemies.Add(enemy15);
+            enemies.Add(enemy16);
+            enemies.Add(enemy17);
+            enemies.Add(enemy18);
+            enemies.Add(enemy19);
+            enemies.Add(enemy20);
+            enemies.Add(enemy21);
+            enemies.Add(enemy22);
+            enemies.Add(enemy23);
+            enemies.Add(enemy24);
+            enemies.Add(enemy25);
+
+
+            //add to area Lists
+            area1Enemies.Add(enemy1);
+            area1Enemies.Add(enemy2);
+            area1Enemies.Add(enemy3);
+
+            area2Enemies.Add(enemy8);
+            area2Enemies.Add(enemy9);
+            area2Enemies.Add(enemy10);
+            area2Enemies.Add(enemy11);
+            area2Enemies.Add(enemy12);
+            area2Enemies.Add(enemy13);
+            area2Enemies.Add(enemy14);
+
+            area3Enemies.Add(enemy17);
+            area3Enemies.Add(enemy18);
+            area3Enemies.Add(enemy19);
+            area3Enemies.Add(enemy20);
+            area3Enemies.Add(enemy21);
+            area3Enemies.Add(enemy22);
+            area3Enemies.Add(enemy23);
+            area3Enemies.Add(enemy24);
+            area3Enemies.Add(enemy25);
+
+            area4Enemies.Add(enemy4);
+            area4Enemies.Add(enemy5);
+            area4Enemies.Add(enemy6);
+            area4Enemies.Add(enemy7);
+            area4Enemies.Add(enemy15);
+            area4Enemies.Add(enemy16);
+
 
             #endregion
 
@@ -313,7 +394,8 @@ namespace GameProgII_FirstPlayable_BenF
             //display HUD
             Console.WriteLine($"Player Health: {player._health}");
             Console.WriteLine($"Player Attack: {player._attack}");
-            Console.WriteLine($"Coins: {player._coins}!");
+            Console.WriteLine($"Coins: {player._coins}");
+            Console.WriteLine($"Area: {area}");
 
             /*
              * GAMEPLAY LOOP
@@ -323,6 +405,8 @@ namespace GameProgII_FirstPlayable_BenF
             while (player._isAlive)
             {
                 player._prevPOS = (player._posX, player._posY);
+
+                CheckArea();
 
                 isPlayerTurn = true;
 
@@ -404,16 +488,56 @@ namespace GameProgII_FirstPlayable_BenF
                 }
 
                 //move enemies (if still alive)
-                foreach (ICharacter enemy in enemies)
-                {
 
-                    if (enemy.CheckAlive() == true)
+                if (area == "Area  1")
+                {
+                    foreach (ICharacter enemy in area1Enemies)
                     {
-                        enemy.Update();
+                        if (enemy.CheckAlive() == true)
+                        {
+                            enemy.Update();
+                        }
                     }
                 }
 
-                CheckHits();
+                else if (area == "Area  2")
+                {
+                    foreach (ICharacter enemy in area2Enemies)
+                    {
+                        if (enemy.CheckAlive() == true)
+                        {
+                            enemy.Update();
+                        }
+                    }
+                }
+
+                else if (area == "Area  3")
+                {
+                    foreach (ICharacter enemy in area3Enemies)
+                    {
+                        if (enemy.CheckAlive() == true)
+                        {
+                            enemy.Update();
+                        }
+                    }
+                }
+
+                else if (area == "Area  4")
+                {
+                    foreach (ICharacter enemy in area4Enemies)
+                    {
+                        if (enemy.CheckAlive() == true)
+                        {
+                            enemy.Update();
+                        }
+                    }
+                }
+
+                else
+                {
+                    //nobody move
+                }
+                    CheckHits();
 
                 //Thread.Sleep(100);
 

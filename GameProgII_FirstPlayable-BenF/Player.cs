@@ -53,7 +53,7 @@ namespace GameProgII_FirstPlayable_BenF
 
                         _posY--;
 
-                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]); //checks if boundary hit
+                        //Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]); //checks if boundary hit
 
                         if (_map.isOccupiedMap[_posX, _posY] == true)
                         {
@@ -65,7 +65,7 @@ namespace GameProgII_FirstPlayable_BenF
 
                         _posX--;
 
-                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]); //checks if boundary hit
+                        //Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]); //checks if boundary hit
 
 
                         if (_map.isOccupiedMap[_posX, _posY] == true)
@@ -79,7 +79,7 @@ namespace GameProgII_FirstPlayable_BenF
 
                         _posY++;
 
-                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]); //checks if boundary hit
+                        //Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]); //checks if boundary hit
 
 
                         if (_map.isOccupiedMap[_posX, _posY] == true)
@@ -92,7 +92,7 @@ namespace GameProgII_FirstPlayable_BenF
 
                         _posX++;
 
-                        Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]); //checks if boundary hit
+                        //Debug.WriteLine(_map.isOccupiedMap[_posX, _posY]); //checks if boundary hit
 
                         if (_map.isOccupiedMap[_posX, _posY] == true)
                         {
@@ -108,11 +108,12 @@ namespace GameProgII_FirstPlayable_BenF
                         break;
 
                     case ConsoleKey.Spacebar:
+                        Debug.WriteLine($"Player Pos: {_posX},{_posY}"); ///(pos)
                         Debug.Write("/");
                         break;
                 }
 
-                Debug.WriteLine($"Player Pos: {_posX},{_posY}"); ///(pos)
+                //Debug.WriteLine($"Player Pos: {_posX},{_posY}"); ///(pos)
 
             }
             

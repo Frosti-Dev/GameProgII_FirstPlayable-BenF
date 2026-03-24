@@ -1,65 +1,65 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\",
+  "WorkspaceRootPath": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|c:\\school\\programming code\\gameprogii_firstplayable-benf\\gameprogii_firstplayable-benf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\pickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\pickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\pickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\icharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\icharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|c:\\users\\w0527459\\documents\\gameprogii_firstplayable-benf\\gameprogii_firstplayable-benf\\upgrade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\upgrade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\healthitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\healthitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\healthitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\map\\mapfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\icharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\icharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\upgrade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\upgrade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\map\\mapfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\map\\mapfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\heavyenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\heavyenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\heavyenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\confusedenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\confusedenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\confusedenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\hazard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\hazard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\hazard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -76,11 +76,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Program.cs",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Program.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Program.cs",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Program.cs",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Program.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\Program.cs",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAgwMYAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAOEBAAAAAAAAAAAAAOkBAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T12:40:57.351Z",
               "IsPinned": true,
@@ -88,55 +88,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\GameManager.cs",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\GameManager.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\GameManager.cs",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\GameManager.cs",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\GameManager.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\GameManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-21T17:24:55.903Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IEntity.cs",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\IEntity.cs",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\IEntity.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\IEntity.cs",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\IEntity.cs",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\IEntity.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\IEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-23T13:48:07.282Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ICharacter.cs",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\ICharacter.cs",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\ICharacter.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\ICharacter.cs",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\ICharacter.cs",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\ICharacter.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\ICharacter.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAuwAsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-09T00:36:21.713Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Player.cs",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Player.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Player.cs",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Player.cs",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Player.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\Player.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAwwKgAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAkwCsAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T12:42:47.445Z",
               "IsPinned": true,
@@ -144,25 +141,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Enemy.cs",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Enemy.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Enemy.cs",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Enemy.cs",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Enemy.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\Enemy.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAmwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T12:43:04.592Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "ConfusedEnemy.cs",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\ConfusedEnemy.cs",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\ConfusedEnemy.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\ConfusedEnemy.cs",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\ConfusedEnemy.cs",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\ConfusedEnemy.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\ConfusedEnemy.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAYwDwAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -173,9 +169,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "HeavyEnemy.cs",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\HeavyEnemy.cs",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\HeavyEnemy.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\HeavyEnemy.cs",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\HeavyEnemy.cs",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\HeavyEnemy.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\HeavyEnemy.cs",
               "ViewState": "AgIAAF4AAAAAAAAAAAAkwHgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -186,11 +182,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Pickup.cs",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Pickup.cs",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Pickup.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Pickup.cs",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Pickup.cs",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Pickup.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\Pickup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwBoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-23T14:05:42.499Z",
               "IsPinned": true,
@@ -200,9 +196,9 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "Coin.cs",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Coin.cs",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Coin.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Coin.cs",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Coin.cs",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Coin.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\Coin.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -211,38 +207,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Upgrade.cs",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Upgrade.cs",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Upgrade.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Upgrade.cs",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Upgrade.cs",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Upgrade.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\Upgrade.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-04T21:59:47.374Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HealthItem.cs",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\HealthItem.cs",
+              "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\HealthItem.cs",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\HealthItem.cs",
+              "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\HealthItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T16:21:10.257Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "HealthItem.cs",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\HealthItem.cs",
-              "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\HealthItem.cs",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\HealthItem.cs",
-              "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\HealthItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T16:21:10.257Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 13,
               "Title": "Hazard.cs",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Hazard.cs",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Hazard.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Hazard.cs",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Hazard.cs",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Hazard.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\Hazard.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -251,13 +247,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Map.cs",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Map.cs",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Map.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Map.cs",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Map.cs",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Map.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\Map.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAA9wLMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAYwLMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T12:42:23.073Z",
               "IsPinned": true,
@@ -267,9 +263,9 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "MapFile.txt",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Map\\MapFile.txt",
+              "DocumentMoniker": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Map\\MapFile.txt",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Map\\MapFile.txt",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Map\\MapFile.txt",
+              "ToolTip": "C:\\school\\programming code\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Map\\MapFile.txt",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\Map\\MapFile.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
