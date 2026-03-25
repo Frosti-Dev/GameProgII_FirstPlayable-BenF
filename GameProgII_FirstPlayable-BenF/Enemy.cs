@@ -177,6 +177,7 @@ namespace GameProgII_FirstPlayable_BenF
                 _health = 0;
                 Destroy();
                 _pos = (0, 0);
+                _prevPOS = (0, 0);
             }
         }
 

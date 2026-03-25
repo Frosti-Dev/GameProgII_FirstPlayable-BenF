@@ -21,6 +21,7 @@ namespace GameProgII_FirstPlayable_BenF
         //create entities
         static Map map = new Map();
         static Player player = new Player(6, 5, map, 10);
+        //static GameManager = new GameManager();
 
         //list of enemies
         static List<ICharacter> enemies = new List<ICharacter>();
@@ -71,7 +72,7 @@ namespace GameProgII_FirstPlayable_BenF
         static Coin coin4 = new Coin((81, 4), 'o', player);
         static Coin coin5 = new Coin((82, 29), 'o', player);
         static Coin coin6 = new Coin((74, 33), 'o', player);
-        static Coin coin7 = new Coin((62, 24), 'o', player);
+        static Coin coin7 = new Coin((62, 25), 'o', player);
         static Coin coin8 = new Coin((14, 29), 'o', player);
         static Coin coin9 = new Coin((14, 34), 'o', player);
         static Coin coin10 = new Coin((4, 34), 'o', player);
@@ -84,7 +85,7 @@ namespace GameProgII_FirstPlayable_BenF
 
         static HealthItem healthPickup1 = new HealthItem((21, 3), '+', player);
         static HealthItem healthPickup2 = new HealthItem((76, 2), '+', player);
-        static HealthItem healthPickup3 = new HealthItem((78, 24), '+', player);
+        static HealthItem healthPickup3 = new HealthItem((78, 25), '+', player);
         static HealthItem healthPickup4 = new HealthItem((81, 10), '+', player);
         static HealthItem healthPickup5 = new HealthItem((63, 32), '+', player);
 

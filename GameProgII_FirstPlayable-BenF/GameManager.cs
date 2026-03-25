@@ -6,74 +6,136 @@ using System.Threading.Tasks;
 
 namespace GameProgII_FirstPlayable_BenF
 {
-    class GameManager
+    internal class GameManager
     {
-        #region Variables
+        string area;
+        bool isPlayerTurn;
+        ICharacter lastEnemy;
 
-        //create entities
-        static Map map = new Map();
-        static Player player = new Player(6, 5, map, 10);
+        Player _player;
 
-        //list of enemies
-        static Enemy e1 = new Enemy((10, 10), 10, 'E', player, map);
-        static ConfusedEnemy e2 = new ConfusedEnemy((5, 10), 10, '?', player, map);
-        static HeavyEnemy e3 = new HeavyEnemy((15, 10), 15, 'H', player, map);
-        static HeavyEnemy e4 = new HeavyEnemy((64, 24), 15, 'H', player, map);
-        static HeavyEnemy e5 = new HeavyEnemy((78, 24), 15, 'H', player, map);
-        static HeavyEnemy e6 = new HeavyEnemy((63, 28), 15, 'H', player, map);
-        static HeavyEnemy e7 = new HeavyEnemy((68, 31), 15, 'H', player, map);
-        static Enemy e8 = new Enemy((62, 3), 10, 'E', player, map);
-        static Enemy e9 = new Enemy((70, 2), 10, 'E', player, map);
-        static Enemy e10 = new Enemy((79, 3), 10, 'E', player, map);
-        static Enemy e11 = new Enemy((79, 6), 10, 'E', player, map);
-        static Enemy e12 = new Enemy((79, 11), 10, 'E', player, map);
-        static Enemy e13 = new Enemy((70, 11), 10, 'E', player, map);
-        static Enemy e14 = new Enemy((63, 11), 10, 'E', player, map);
-        static Enemy e15 = new Enemy((78, 28), 10, 'E', player, map);
-        static Enemy e16 = new Enemy((63, 31), 10, 'E', player, map);
-        static Enemy e17 = new Enemy((10, 10), 10, 'E', player, map);
-        static Enemy e18 = new Enemy((10, 10), 10, 'E', player, map);
-        static Enemy e19 = new Enemy((10, 10), 10, 'E', player, map);
-        static Enemy e20 = new Enemy((10, 10), 10, 'E', player, map);
-        static Enemy e21 = new Enemy((10, 10), 10, 'E', player, map);
-        static Enemy e22 = new Enemy((10, 10), 10, 'E', player, map);
-        static Enemy e23 = new Enemy((10, 10), 10, 'E', player, map);
-        static Enemy e24 = new Enemy((10, 10), 10, 'E', player, map);
-        static Enemy e25 = new Enemy((10, 10), 10, 'E', player, map);
-        static Enemy e26 = new Enemy((10, 10), 10, 'E', player, map);
-        static Enemy e27 = new Enemy((10, 10), 10, 'E', player, map);
-        static Enemy e28 = new Enemy((10, 10), 10, 'E', player, map);
-        static Enemy e29 = new Enemy((10, 10), 10, 'E', player, map);
-        static Enemy e30 = new Enemy((10, 10), 10, 'E', player, map);
+        public GameManager(Player player)
+        {
+            _player = player;
+        }
 
-
-        //list of pickups
-        static Coin coin = new Coin((11, 3), 'o', player);
-        static Upgrade upgrade = new Upgrade((21, 11), '/', player);
-        static HealthItem healthPickup = new HealthItem((21, 3), '+', player);
-
-
-        //list of hazards
-        static Hazard hazard1 = new Hazard((4, 8), '#');
-        static Hazard hazard2 = new Hazard((5, 8), '#');
-        static Hazard hazard3 = new Hazard((4, 9), '#');
-        static Hazard hazard4 = new Hazard((5, 9), '#');
-
-
-        #endregion
-
-        //public ICharacter EnemyReturn(int enemyNum)
+        //static public void CheckHits()
         //{
-        //    for (int i = 0; i < 30; i++ )
+        //    /*
+        //     * Checks Entity Collision
+        //     */
+        //    (int, int) playerPos = (_player._posX, _player._posY); //converts player POS into (int,int)
+
+        //    if (isPlayerTurn)
         //    {
-        //        List<ICharacter> enemies = new List<ICharacter>();
+        //        foreach (ICharacter enemy in enemies) //checks if player hit any enemies
+        //        {
+        //            if (playerPos == enemy.CheckPOS(false))
+        //            {
+        //                enemy.TakeDamage(_player._attack);
+        //                lastEnemy = enemy;
+        //                _player.SetPOS(_player._prevPOS);
+        //            }
+        //        }
 
-                
+        //        foreach (Pickup pickup in pickups) //checks if player hit any pickups
+        //        {
+        //            if (playerPos == pickup._pos)
+        //            {
+        //                pickup.Destroy();
+        //                _player.SetPOS(_player._prevPOS);
+        //            }
+        //        }
 
-        //        enemies.Add(new Enemy);
+        //        foreach (Hazard hazard in hazards)
+        //        {
+        //            if (playerPos == hazard._pos)
+        //            {
+        //                hazard.Effect(_player);
+        //            }
+
+        //        }
+
+
         //    }
+
+        //    else //enemy turn
+        //    {
+        //        foreach (ICharacter enemy in enemies) //checks if enemy hit player
+        //        {
+        //            if (playerPos == enemy.CheckPOS(false))
+        //            {
+        //                _player.TakeDamage(enemy.CheckAttack());
+        //                enemy.SetPOS(enemy.CheckPOS(true));
+        //            }
+        //        }
+
+        //        foreach (ICharacter enemy in enemies) //check if enemy hit enemy
+        //        {
+        //            foreach (ICharacter otherEnemy in enemies)
+        //            {
+        //                if (enemy != otherEnemy)
+        //                {
+        //                    if (enemy.CheckPOS(false) == otherEnemy.CheckPOS(false))
+        //                    {
+        //                        enemy.SetPOS(enemy.CheckPOS(true));
+        //                    }
+        //                }
+        //            }
+        //        }
+
+        //    }
+
+        //    Console.SetCursorPosition(0, 38);
+        //    //update HUD
+        //    if (_player._health < 10)
+        //    {
+        //        Console.WriteLine($"Player Health: 0{_player._health}");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"Player Health: {_player._health}");
+        //    }
+        //    Console.WriteLine($"Player Attack: 0{_player._attack}");
+        //    Console.WriteLine($"Coins: {_player._coins}");
+        //    Console.WriteLine($"Area: {area}");
+
         //}
 
+        //static public void CheckArea()
+        //{
+        //    if (_player._posY < 13)
+        //    {
+        //        if (_player._posX > 26)
+        //        {
+        //            if (_player._posX < 57) area = "Hallway";
+
+        //            else if (_player._posX > 57) area = "Area  2";
+
+        //        }
+
+        //        else if (_player._posX < 26) area = "Area  1";
+        //    }
+
+        //    else if (_player._posY > 22)
+        //    {
+        //        if (_player._posX > 26)
+        //        {
+        //            if (_player._posX < 57) area = "Hallway";
+
+        //            else if (_player._posX > 57) area = "Area  4";
+
+        //        }
+
+        //        else if (_player._posX < 26) area = "Area  3";
+        //    }
+
+        //    else
+        //    {
+        //        area = "Hallway";
+        //    }
+
+        //}
 
     }
 }
