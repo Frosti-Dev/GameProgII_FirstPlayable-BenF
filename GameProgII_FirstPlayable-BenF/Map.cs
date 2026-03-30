@@ -10,7 +10,7 @@ namespace GameProgII_FirstPlayable_BenF
 {
     internal class Map
     {
-        static public string path = @"Map/MapFile.txt";
+        static public string path = @"Files/MapFile.txt";
 
         static public string mapData = File.ReadAllText(path); 
 

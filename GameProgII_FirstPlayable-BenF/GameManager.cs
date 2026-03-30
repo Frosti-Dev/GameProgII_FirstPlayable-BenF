@@ -174,6 +174,14 @@ namespace GameProgII_FirstPlayable_BenF
                         hazard.Effect(player);
                     }
 
+                    foreach(Enemy enemy in enemies)
+                    {
+                        if(enemy.CheckPOS(false) == hazard._pos)
+                        {
+                            hazard.Effect(enemy);
+                        }
+                    }
+
                 }
 
 
