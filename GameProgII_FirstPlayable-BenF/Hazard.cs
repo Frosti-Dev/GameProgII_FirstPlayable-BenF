@@ -18,15 +18,22 @@ namespace GameProgII_FirstPlayable_BenF
         }
 
         public void Draw()
-        {
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.SetCursorPosition(_pos.Item1, _pos.Item2);
+        {  
+            if (_pos.Item1 < Console.WindowWidth)
+            {
+                if (_pos.Item2 < Console.WindowHeight)
+                {
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.SetCursorPosition(_pos.Item1, _pos.Item2);
 
-            Console.Write(_model);
+                    Console.Write(_model);
 
-            Console.SetCursorPosition(_pos.Item1, _pos.Item2);
-            Console.ForegroundColor = ConsoleColor.White;
+                    Console.SetCursorPosition(_pos.Item1, _pos.Item2);
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+            }
         }
+        
 
         public void Destroy()
         {
