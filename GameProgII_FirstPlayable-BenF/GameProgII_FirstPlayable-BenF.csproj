@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Files\AttackInfoFile.txt" />
+    <Content Include="Files\UpgradeInfoFile.txt" />
     <Content Include="Files\HealthInfoFile.txt" />
     <Content Include="Files\CoinInfoFile.txt" />
     <Content Include="Files\EnemyInfoFile.txt" />

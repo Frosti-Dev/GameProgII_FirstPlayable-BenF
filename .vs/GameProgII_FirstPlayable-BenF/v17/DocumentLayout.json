@@ -3,48 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|c:\\users\\w0527459\\documents\\gameprogii_firstplayable-benf\\gameprogii_firstplayable-benf\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|c:\\users\\w0527459\\documents\\gameprogii_firstplayable-benf\\gameprogii_firstplayable-benf\\files\\coininfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\files\\coininfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|c:\\users\\w0527459\\documents\\gameprogii_firstplayable-benf\\gameprogii_firstplayable-benf\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|c:\\users\\w0527459\\documents\\gameprogii_firstplayable-benf\\gameprogii_firstplayable-benf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|c:\\users\\w0527459\\documents\\gameprogii_firstplayable-benf\\gameprogii_firstplayable-benf\\files\\attackinfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\files\\attackinfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\files\\coininfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\files\\coininfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|c:\\users\\w0527459\\documents\\gameprogii_firstplayable-benf\\gameprogii_firstplayable-benf\\files\\healthinfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\files\\healthinfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|c:\\users\\w0527459\\documents\\gameprogii_firstplayable-benf\\gameprogii_firstplayable-benf\\files\\upgradeinfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\files\\upgradeinfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\files\\mapfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\files\\mapfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\files\\enemyinfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\files\\enemyinfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\files\\healthinfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\files\\healthinfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\icharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\icharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\icharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\icharacter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\files\\enemyinfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\files\\enemyinfofile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|solutionrelative:gameprogii_firstplayable-benf\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CFD64C3C-56A2-495D-9B0D-019BDB0F4B3A}|GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF.csproj|C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\gameprogii_firstplayable-benf\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,13 +90,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Program.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Program.cs",
               "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Program.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIoAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAowIoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T12:40:57.351Z",
               "IsPinned": true,
@@ -110,7 +110,7 @@
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\GameManager.cs",
               "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\GameManager.cs",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\GameManager.cs",
-              "ViewState": "AgIAAP0AAAAAAAAAAAA9wEoBAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAIoAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-21T17:24:55.903Z",
               "IsPinned": true,
@@ -118,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "IEntity.cs",
               "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\IEntity.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\IEntity.cs",
@@ -132,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "ICharacter.cs",
               "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\ICharacter.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\ICharacter.cs",
@@ -211,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Coin.cs",
               "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Coin.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Coin.cs",
@@ -220,8 +220,7 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-04T17:46:42.911Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -264,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "Map.cs",
               "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Map.cs",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Map.cs",
@@ -273,25 +272,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-01T12:37:54.653Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AttackInfoFile.txt",
-              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Files\\AttackInfoFile.txt",
-              "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Files\\AttackInfoFile.txt",
-              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Files\\AttackInfoFile.txt",
-              "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\Files\\AttackInfoFile.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-04-01T12:40:49.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "MapFile.txt",
               "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Files\\MapFile.txt",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Files\\MapFile.txt",
@@ -304,33 +289,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpgradeInfoFile.txt",
+              "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Files\\UpgradeInfoFile.txt",
+              "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Files\\UpgradeInfoFile.txt",
+              "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Files\\UpgradeInfoFile.txt",
+              "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\Files\\UpgradeInfoFile.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-04-01T12:40:49.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
               "Title": "HealthInfoFile.txt",
               "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Files\\HealthInfoFile.txt",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Files\\HealthInfoFile.txt",
               "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Files\\HealthInfoFile.txt",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\Files\\HealthInfoFile.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2026-04-01T12:30:01.379Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CoinInfoFile.txt",
               "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Files\\CoinInfoFile.txt",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Files\\CoinInfoFile.txt",
               "ToolTip": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Files\\CoinInfoFile.txt",
               "RelativeToolTip": "GameProgII_FirstPlayable-BenF\\Files\\CoinInfoFile.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2026-04-01T12:29:29.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "EnemyInfoFile.txt",
               "DocumentMoniker": "C:\\Users\\w0527459\\Documents\\GameProgII_FirstPlayable-BenF\\GameProgII_FirstPlayable-BenF\\Files\\EnemyInfoFile.txt",
               "RelativeDocumentMoniker": "GameProgII_FirstPlayable-BenF\\Files\\EnemyInfoFile.txt",

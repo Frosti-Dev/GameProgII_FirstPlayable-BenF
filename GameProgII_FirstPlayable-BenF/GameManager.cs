@@ -134,7 +134,6 @@ namespace GameProgII_FirstPlayable_BenF
 
         #endregion
 
-
         #region read data
         //coin data
         static public string coinPath = @"Files/CoinInfoFile.txt";
