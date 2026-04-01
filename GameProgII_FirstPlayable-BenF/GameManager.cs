@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,6 @@ namespace GameProgII_FirstPlayable_BenF
         //create entities
         static Map map = new Map();
         static Player player = new Player(6, 5, map, 10);
-        //static GameManager = new GameManager();
 
         //list of enemies
         static List<ICharacter> enemies = new List<ICharacter>();
@@ -133,6 +133,23 @@ namespace GameProgII_FirstPlayable_BenF
         static Hazard hazard37 = new Hazard((74, 31), '#');
 
         #endregion
+
+
+        #region read data
+        //coin data
+        static public string coinPath = @"Files/CoinInfoFile.txt";
+        static public string[] coinData = File.ReadAllLines(coinPath);
+
+        //health pickup data
+        static public string healthPath = @"Files/HealthInfoFile.txt";
+        static public string healthData = File.ReadAllText(healthPath);
+
+        //attack pickup data
+        static public string attackPath = @"Files/AttackInfoFile.txt";
+        static public string attackData = File.ReadAllText(healthPath);
+
+        #endregion
+
 
         public GameManager()
         {
@@ -313,6 +330,13 @@ namespace GameProgII_FirstPlayable_BenF
             pickups.Add(coin9);
             pickups.Add(coin10);
 
+            //if (File.Exists(coinPath))
+            //{
+            //    for (int i = 0; i < coinData.Length; i++)
+            //    {
+            //        pickups.Add(new Coin(coinData[i], 'o', player));
+            //    }
+            //}
             pickups.Add(healthPickup1);
             pickups.Add(healthPickup2);
             pickups.Add(healthPickup3);
