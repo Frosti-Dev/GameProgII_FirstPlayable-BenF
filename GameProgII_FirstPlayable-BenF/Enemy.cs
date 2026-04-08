@@ -35,6 +35,7 @@ namespace GameProgII_FirstPlayable_BenF
             _attack = 1;
         }
 
+        
 
         public void Draw()
         { 
