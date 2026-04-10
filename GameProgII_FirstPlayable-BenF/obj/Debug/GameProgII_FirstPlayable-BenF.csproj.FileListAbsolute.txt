@@ -14,7 +14,6 @@ C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayab
 C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.exe
 C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\obj\Debug\GameProgII_FirstPlayable-BenF.pdb
 C:\school\builds_semester 2\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Map\MapFile.txt
-C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Map\MapFile.txt
 C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\GameProgII_FirstPlayable-BenF.exe.config
 C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\GameProgII_FirstPlayable-BenF.exe
 C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\GameProgII_FirstPlayable-BenF.pdb
@@ -28,3 +27,9 @@ C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayab
 C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\CoinInfoFile.txt
 C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\EnemyInfoFile.txt
 C:\Users\w0527459\Documents\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\HazardInfoFile.txt
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\HazardInfoFile.txt
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\UpgradeInfoFile.txt
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\HealthInfoFile.txt
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\CoinInfoFile.txt
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\EnemyInfoFile.txt
+C:\school\programming code\GameProgII_FirstPlayable-BenF\GameProgII_FirstPlayable-BenF\bin\Debug\Files\MapFile.txt

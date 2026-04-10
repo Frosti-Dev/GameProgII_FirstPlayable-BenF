@@ -11,11 +11,19 @@ namespace GameProgII_FirstPlayable_BenF
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
+           GameManager Game = new GameManager();
 
-            GameManager.GameStart();
+           while (true)
+           {
+               Game.GameStart();
 
+               Game.GameEnd();
+               
+           }
+            
         }
     }
 }

@@ -71,13 +71,12 @@ namespace GameProgII_FirstPlayable_BenF
 
         #endregion
 
-
         public GameManager()
         {
 
         }
 
-        static private void CheckHits()
+        private void CheckHits()
         {
             /*
              * Checks Entity Collision
@@ -167,12 +166,13 @@ namespace GameProgII_FirstPlayable_BenF
                 Console.WriteLine($"Player Attack: 0{player._attack}");
                 Console.WriteLine($"Coins: {player._coins}");
                 Console.WriteLine($"Area: {area}");
+                Console.WriteLine("!: Attack Up | +: Health Up | o: Coin");
             }
             
 
         }
 
-        static private void CheckArea()
+        private void CheckArea()
         {
             if (player._posY < 13)
             {
@@ -207,7 +207,7 @@ namespace GameProgII_FirstPlayable_BenF
 
         }
 
-        static private void ChangeWindowSize()
+        private void ChangeWindowSize()
         {
             int curWindowWidth = Console.WindowWidth;
             int curWindowHeight = Console.WindowHeight;
@@ -232,7 +232,7 @@ namespace GameProgII_FirstPlayable_BenF
             prevWindowWidth = curWindowWidth;
         }
 
-        static public void GameStart()
+        public void GameStart()
         {
             Console.CursorVisible = false;
 
@@ -293,7 +293,7 @@ namespace GameProgII_FirstPlayable_BenF
                     if (int.TryParse(upgradeString[0], out int result1) && int.TryParse(upgradeString[1], out int result2))
                     {
                         (int, int) upgradePOS = (result1, result2);
-                        pickups.Add(new Upgrade(upgradePOS, '/', player));
+                        pickups.Add(new Upgrade(upgradePOS, '!', player));
                     }
 
                     else
@@ -354,76 +354,79 @@ namespace GameProgII_FirstPlayable_BenF
 
                                     if (enemyModel == '?')
                                     {
-                                        enemies.Add(new ConfusedEnemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                        ConfusedEnemy confusedEnemy = new ConfusedEnemy(enemyPOS, enemyHealth, enemyModel, player, map);
+                                        enemies.Add(confusedEnemy);
 
                                         if (enemyArea == 1)
                                         {
-                                            area1Enemies.Add(new ConfusedEnemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                            area1Enemies.Add(confusedEnemy);
                                         }
 
                                         else if (enemyArea == 2)
                                         {
-                                            area2Enemies.Add(new ConfusedEnemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                            area2Enemies.Add(confusedEnemy);
                                         }
 
                                         else if (enemyArea == 3)
                                         {
-                                            area3Enemies.Add(new ConfusedEnemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                            area3Enemies.Add(confusedEnemy);
                                         }
 
                                         else
                                         {
-                                            area4Enemies.Add(new ConfusedEnemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                            area4Enemies.Add(confusedEnemy);
                                         }
                                     }
 
                                     else if (enemyModel == 'H')
                                     {
-                                        enemies.Add(new HeavyEnemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                        HeavyEnemy heavyEnemy = new HeavyEnemy(enemyPOS, enemyHealth, enemyModel, player, map);
+                                        enemies.Add(heavyEnemy);
 
                                         if (enemyArea == 1)
                                         {
-                                            area1Enemies.Add(new HeavyEnemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                            area1Enemies.Add(heavyEnemy);
                                         }
 
                                         else if (enemyArea == 2)
                                         {
-                                            area2Enemies.Add(new HeavyEnemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                            area2Enemies.Add(heavyEnemy);
                                         }
 
                                         else if (enemyArea == 3)
                                         {
-                                            area3Enemies.Add(new HeavyEnemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                            area3Enemies.Add(heavyEnemy);
                                         }
 
                                         else
                                         {
-                                            area4Enemies.Add(new HeavyEnemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                            area4Enemies.Add(heavyEnemy);
                                         }
                                     }
 
                                     else
                                     {
-                                        enemies.Add(new Enemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                        Enemy enemy = new Enemy(enemyPOS, enemyHealth, enemyModel, player, map);
+                                        enemies.Add(enemy);
 
                                         if(enemyArea == 1)
                                         {
-                                            area1Enemies.Add(new Enemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                            area1Enemies.Add(enemy);
                                         }
 
                                         else if(enemyArea == 2)
                                         {
-                                            area2Enemies.Add(new Enemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                            area2Enemies.Add(enemy);
                                         }
 
                                         else if (enemyArea == 3)
                                         {
-                                            area3Enemies.Add(new Enemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                            area3Enemies.Add(enemy);
                                         }
 
                                         else 
                                         {
-                                            area4Enemies.Add(new Enemy(enemyPOS, enemyHealth, enemyModel, player, map));
+                                            area4Enemies.Add(enemy);
                                         }
                                     }
                                 }
@@ -432,7 +435,6 @@ namespace GameProgII_FirstPlayable_BenF
                                 {
                                     Debug.WriteLine($"{enemyData[i]} failed to convert model.");
                                    
-
                                 }
                             }
 
@@ -472,6 +474,8 @@ namespace GameProgII_FirstPlayable_BenF
             Console.WriteLine($"Player Attack: {player._attack}");
             Console.WriteLine($"Coins: {player._coins}");
             Console.WriteLine($"Area: {area}");
+            Console.WriteLine("!: Attack Up | +: Health Up | o: Coin");
+
 
             /*
              * GAMEPLAY LOOP
@@ -661,20 +665,52 @@ namespace GameProgII_FirstPlayable_BenF
 
             }
 
-            #region Win Screens
-            if (hasWon)
-            {
-                Console.Clear();
-                Console.WriteLine("You have Won!");
-            }
+        }
 
-            else
+        public bool GameEnd()
+        {
+            while (true)
             {
-                Console.Clear();
-                Console.WriteLine("You have lost!");
-            }
-            #endregion
+                #region Win Screens
+                if (hasWon)
+                {
+                    Console.Clear();
+                    Console.WriteLine("You have Won!");
 
+                }
+
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("You have lost!");
+                }
+                #endregion
+                Console.WriteLine("Do you want to play again? (Y/N)");
+
+                ConsoleKeyInfo keyinfo = Console.ReadKey(true);
+
+                if (keyinfo.Key == ConsoleKey.Y)
+                {
+                    string currentAppPath = Process.GetCurrentProcess().MainModule.FileName;
+
+                    Process.Start(currentAppPath);
+
+                    Environment.Exit(0);
+                    return true;
+                }
+
+                else if (keyinfo.Key == ConsoleKey.N)
+                {
+                    Environment.Exit(0);
+                }
+
+                else
+                {
+                   
+                }
+
+            }
+            
         }
     }
 }
